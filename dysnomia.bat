@@ -55,9 +55,110 @@ echo America, Europe, and the Soviets are planning Moon missions.
 pause
 goto :MISSIONCONTROL
 :MISSIONCONTROL
+echo Welcome to Mission Control. Choose a destination. Say help for destinations.
+set /p destinations=
+if %destinations%==sun goto :sun
+if %destinations%==mercury goto :mercury
+if %destinations%==venus goto :venus
+if %destinations%==earth goto :earth
+if %destinations%==moon goto :moon
+if %destinations%==mars goto :mars
+if %destinations%==phobos goto :phobos
+if %destinations%==deimos goto :deimos
+if %destinations%==vesta goto :vesta
+if %destinations%==ceres goto :ceres
+if %destinations%==jupiter goto :jupiter
+if %destinations%==io goto :io
+if %destinations%==europa goto :europa
+if %destinations%==ganymede goto :ganymede
+if %destinations%==callisto goto :callisto
+if %destinations%==saturn goto :saturn
+if %destinations%==mimas goto :mimas
+if %destinations%==enceladus goto :enceladus
+if %destinations%==tethys goto :tethys
+if %destinations%==dione goto :dione
+if %destinations%==rhea goto :rhea
+if %destinations%==titan goto :titan
+if %destinations%==iapetus goto :iapetus
+if %destinations%==uranus goto :uranus
+if %destinations%==miranda goto :miranda
+if %destinations%==ariel goto :ariel
+if %destinations%==umbriel goto :umbriel
+if %destinations%==titania goto :titania
+if %destinations%==oberon goto :oberon
+if %destinations%==neptune goto :neptune
+if %destinations%==triton goto :triton
+if %destinations%==nereid goto :nereid
+if %destinations%==pluto goto :pluto
+if %destinations%==charon goto :charon
+if %destinations%==nix goto :nix
+if %destinations%==styx goto :styx
+if %destinations%==hydra goto :hydra
+if %destinations%==kerberos goto :kerberos
+if %destinations%==eris goto :eris
+if %destinations%==dysnomia goto :dysnomia
+if %destinations%==haumea goto :haumea
+if %destinations%==hiiaka goto :hiiaka
+if %destinations%==namaka goto :namaka
+if %destinations%==sedna goto :sedna
+if %destinations%==planet nine goto :planetnine
+if %destinations%==proxcen goto :proxcen
+if %destinations%==alphacena goto :alphacena
+if %destinations%==alphacenb goto :alphacenb
+if %destinations%==help goto :help
 
+:help 
+Destinations: (use NO apostrophes, or capital letters, or spaces). Some of these may not be implemented or have not been unlocked.
+echo Sun
+echo Mercury
+echo Venus
+echo Earth
+echo Moon
+echo Mars
+echo Phobos
+echo Deimos
+echo Vesta
+echo Ceres
+echo Jupiter
+echo Io
+echo Europa
+echo Ganymede
+echo Callisto
+echo Saturn
+echo Mimas
+echo Enceladus
+echo Tethys
+echo Dione
+echo Rhea
+echo Titan
+echo Iapetus
+echo Uranus
+echo Miranda
+echo Ariel
+echo Umbriel
+echo Titania
+echo Oberon
+echo Neptune
+echo Triton 
+echo Nereid
+echo Pluto
+echo Charon
+echo Nix
+echo Styx
+echo Hydra
+echo Kerberos
+echo Eris
+echo Dysnomia
+echo Haumea
+echo Hiiaka
+echo Namaka
+echo Sedna
+echo Planet Nine
+echo Proxima Centuari (type proxcen)
+echo Alpha Centuari A (type alphacena)
+echo Alpha Centuari B (type alphacenb)
 :: ...and end here.
-:: other menu option routines go here
+:: other main menu option routines go here
 :instr
 echo Simple text adventure game with XP and stuff. Just upgrade.
 pause
