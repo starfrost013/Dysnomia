@@ -27,6 +27,7 @@ echo Virus.%DATE%.%TIME%.Severity%RANDOM%.%RANDOM%
 pause
 goto :Title
 :Title
+cls
 echo {Dysnomia}
 echo 1: Start
 echo 2: Instructions
@@ -55,6 +56,7 @@ echo America, Europe, and the Soviets are planning Moon missions.
 pause
 goto :MISSIONCONTROL
 :MISSIONCONTROL
+cls
 echo Welcome to Mission Control. Choose a destination. Say help for destinations.
 set /p destinations=
 if %destinations%==sun goto :sun
@@ -157,6 +159,7 @@ echo Planet Nine
 echo Proxima Centuari (type proxcen)
 echo Alpha Centuari A (type alphacena)
 echo Alpha Centuari B (type alphacenb)
+goto :MISSIONCONTROL
 :: ...and end here.
 :: other main menu option routines go here
 :instr
