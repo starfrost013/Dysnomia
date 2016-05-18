@@ -4,8 +4,10 @@
 :: Write to dysnomialog.txt
 :: Revisions:
 :: v0.0.04 - start work on actual game, github links, etc.
+:: v0.0.2 - imp. destination function, help...
+:: v0.0.2.1 - emergency bugfix 
 :GAMEVAR
-set /a XP+
+set /a 
 @ECHO OFF
 :LOGWRITE
 set %GameVersion%=0.0.1
@@ -110,7 +112,7 @@ if %destinations%==alphacenb goto :alphacenb
 if %destinations%==help goto :help
 
 :help 
-Destinations: (use NO apostrophes, or capital letters, or spaces). Some of these may not be implemented or have not been unlocked.
+echo Destinations: (use NO apostrophes, or capital letters, or spaces). Some of these may not be implemented or have not been unlocked.
 echo Sun
 echo Mercury
 echo Venus
