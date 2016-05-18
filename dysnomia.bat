@@ -6,11 +6,14 @@
 :: v0.0.04 - start work on actual game, github links, etc.
 :: v0.0.2 - imp. destination function, help...
 :: v0.0.2.1 - emergency bugfix 
+:: v0.0.2.2 - hotfix
+:: v0.0.3 - shop system implementation
 :GAMEVAR
-set /a 
+set /a money=450
 @ECHO OFF
+title Dysnomia [v0.0.3]
 :LOGWRITE
-set %GameVersion%=0.0.1
+set %GameVersion%=v0.0.3
 echo Game Version=%GameVersion%>> dysnomialog.txt
 echo Windows Version=%OS%>> dysnomialog.txt
 echo Computer Name=%COMPUTERNAME%>> dysnomialog.txt
@@ -59,7 +62,15 @@ pause
 goto :MISSIONCONTROL
 :MISSIONCONTROL
 cls
-echo Welcome to Mission Control. Choose a destination. Say help for destinations.
+echo Welcome to Mission Control. What do you want to do?
+echo 1) Choose a destination
+echo 2) Go to the shop
+echo 3) Go back to the main menu
+set /p missionchoice=
+if %missionchoice%==1 goto :destinchoice
+if %missionchoice%==2 goto :shop
+if %missionchoice%==3 goto :Title
+:destinchoice
 set /p destinations=
 if %destinations%==sun goto :sun
 if %destinations%==mercury goto :mercury
@@ -162,6 +173,42 @@ echo Proxima Centuari (type proxcen)
 echo Alpha Centuari A (type alphacena)
 echo Alpha Centuari B (type alphacenb)
 goto :MISSIONCONTROL
+
+:shop
+echo Select a planet to get to
+set /a moon=5
+set /a mars=24
+set /a venus=37
+set /a deimos=49
+set /a phobos=51
+set /a mercury=80
+set /a sun=110
+set /a vesta=125
+set /a ceres=145
+set /a jupiter=245
+set /a io=246
+set /a europa=249
+set /a ganymede=252
+set /a callisto=253
+set /a saturn=345
+set /a mimas=348
+set /a enceladus=350
+set /a tethys=353
+set /a dione=355
+set /a rhea=356
+set /a titan=360
+set /a iapetus=364
+set /a uranus=626
+set /a miranda=628
+set /p item="please type what you want: "
+set /a item=%item%
+set /a cost=item
+if %money% lss %cost% echo you do not have enough money && goto start
+set /a money=money-item
+:show
+echo %money%
+pause
+goto start
 :: ...and end here.
 :: other main menu option routines go here
 :instr
