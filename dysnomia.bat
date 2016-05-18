@@ -1,16 +1,16 @@
 @ECHO OFF
 :LOGWRITE
 set %GameVersion%=0.0.1
-echo Game Version=%GameVersion% >> dysnomialog.txt
-echo Windows Version=%OS% >> dysnomialog.txt
-echo Computer Name=%COMPUTERNAME% >> dysnomialog.txt
-echo Win Root=%SystemRoot% >> dysnomialog.txt
-echo Processor Information: >> dysnomialog.txt
-echo Architecture=%PROCESSOR_ARCHITECTURE% >> dysnomialog.txt
-echo Identifier=%PROCESSOR_IDENTIFIER% >> dysnomialog.txt
-echo Level=%PROCESSOR_LEVEL% >> dysnomialog.txt
-echo Revsion=%PROCESSOR_REVISION% >> dysnomialog.txt
-echo Cores=%NUMBER_OF_PROCESSORS% >> dysnomialog.txt
+echo Game Version=%GameVersion%>> dysnomialog.txt
+echo Windows Version=%OS%>> dysnomialog.txt
+echo Computer Name=%COMPUTERNAME%>> dysnomialog.txt
+echo Win Root=%SystemRoot%>> dysnomialog.txt
+echo Processor Information:>> dysnomialog.txt
+echo Architecture=%PROCESSOR_ARCHITECTURE%>> dysnomialog.txt
+echo Identifier=%PROCESSOR_IDENTIFIER%>> dysnomialog.txt
+echo Level=%PROCESSOR_LEVEL%>> dysnomialog.txt
+echo Revsion=%PROCESSOR_REVISION%>> dysnomialog.txt
+echo Cores=%NUMBER_OF_PROCESSORS%>> dysnomialog.txt
 goto :Title
 :Secret
 echo wrote 14:35 18/05/2016, current date %DATE%!
