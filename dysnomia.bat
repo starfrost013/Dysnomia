@@ -11,6 +11,7 @@
 :: v0.0.3.5 - shop implementation pt 2
 :: v0.0.3.6 - hotfix
 :: v0.0.4 "Orbit" - Allow Earth orbit to be reached and add 8 money.
+:: v0.0.4.1 - emergency bugfix
 :GAMEVAR
 set /a money=20000
 set /a speed=0
@@ -155,127 +156,127 @@ echo And liftoff!
 pause
 echo speed=%speed%
 set speed=1119
-TIMEOUT 0.05
+TIMEOUT 1
 set speed=1512
-TIMEOUT 0.05
+TIMEOUT 1
 set speed=2026
-TIMEOUT 0.05
+TIMEOUT 1
 set speed=2661
-TIMEOUT 0.05
+TIMEOUT 1
 set speed=3227
-TIMEOUT 0.05
+TIMEOUT 1
 set speed=4083
-TIMEOUT 0.05
+TIMEOUT 1
 set speed=4882
-TIMEOUT 0.05
+TIMEOUT 1
 set speed=5661
-TIMEOUT 0.05
+TIMEOUT 1
 set speed=6072
-TIMEOUT 0.05
+TIMEOUT 1
 set speed=6819
-TIMEOUT 0.05
+TIMEOUT 1
 set speed=7551
-TIMEOUT 0.05
+TIMEOUT 1
 set speed=8360
-TIMEOUT 0.05
+TIMEOUT 1
 set speed=8891
-TIMEOUT 0.05
+TIMEOUT 1
 set speed=9256
-TIMEOUT 0.05
+TIMEOUT 1
 set speed=9774
-TIMEOUT 0.05
+TIMEOUT 1
 set speed=10405
-TIMEOUT 0.05
+TIMEOUT 1
 echo 10,000 mph reached. Commencing stage 3 seperation...
-TIMEOUT 0.7
+TIMEOUT 1
 echo Stage 3 seperated. Weight has fallen from 192.4 to 131.6 tons.
-TIMEOUT 0.05
+TIMEOUT 1
 set speed=11471
-TIMEOUT 0.05
+TIMEOUT 1
 set speed=12842
-TIMEOUT 0.05
+TIMEOUT 1
 set speed=13921
-TIMEOUT 0.05
+TIMEOUT 1
 set speed=14612
-TIMEOUT 0.05
+TIMEOUT 1
 set speed=15881
-TIMEOUT 0.05
+TIMEOUT 1
 set speed=16440
-TIMEOUT 0.05
+TIMEOUT 1
 set speed=17929
-TIMEOUT 0.05
+TIMEOUT 1
 set speed=20203
-TIMEOUT 0.05
+TIMEOUT 1
 set speed=22158
-TIMEOUT 0.05
+TIMEOUT 1
 set speed=24200
-TIMEOUT 0.05
+TIMEOUT 1
 echo 24,000 mph reached. Commencing stage 2 seperation...
-TIMEOUT 0.7
+TIMEOUT 1
 echo Stage 2 seperation complete.
-TIMEOUT 0.05
+TIMEOUT 1
 set speed=27715
-TIMEOUT 0.05
+TIMEOUT 1
 set speed=30671
-TIMEOUT 0.05
+TIMEOUT 1
 set speed=33819
-TIMEOUT 0.05
+TIMEOUT 1
 set speed=36617
-TIMEOUT 0.05
+TIMEOUT 1
 set speed=39220
-TIMEOUT 0.05
+TIMEOUT 1
 echo 39,000 mph reached. Coasting to circualization burn...
-TIMEOUT 0.3
+TIMEOUT 1
 echo Altitude 160km.
-TIMEOUT 0.3
+TIMEOUT 1
 echo Altitude 210km.
-TIMEOUT 0.3
+TIMEOUT 1
 echo Altitude 260km.
-TIMEOUT 0.3
+TIMEOUT 1
 echo Altitude 310km.
-TIMEOUT 0.3
+TIMEOUT 1
 echo Altitude 360km.
-TIMEOUT 0.3
+TIMEOUT 1
 echo Altitude 410km.
-TIMEOUT 0.3
+TIMEOUT 1
 echo Altitude 450km. Burning for 2,000+-90 km orbit.
 TIMEOUT 1.0
 echo Burn percentage = %burnpercent%
-TIMEOUT 0.2
+TIMEOUT 1
 set %burnpercent% = 4
-TIMEOUT 0.2
+TIMEOUT 1
 set %burnpercent% = 11
-TIMEOUT 0.2
+TIMEOUT 1
 set %burnpercent% = 16
-TIMEOUT 0.2
+TIMEOUT 1
 set %burnpercent% = 22
-TIMEOUT 0.2
+TIMEOUT 1
 set %burnpercent% = 25
-TIMEOUT 0.2
+TIMEOUT 1
 set %burnpercent% = 31
-TIMEOUT 0.2
+TIMEOUT 1
 set %burnpercent% = 35
-TIMEOUT 0.2
+TIMEOUT 1
 set %burnpercent% = 40
-TIMEOUT 0.2
+TIMEOUT 1
 set %burnpercent% = 48
-TIMEOUT 0.2
+TIMEOUT 1
 set %burnpercent% = 55
-TIMEOUT 0.2
+TIMEOUT 1
 set %burnpercent% = 61
-TIMEOUT 0.2
+TIMEOUT 1
 set %burnpercent% = 67
-TIMEOUT 0.2
+TIMEOUT 1
 set %burnpercent% = 75
-TIMEOUT 0.2
+TIMEOUT 1
 set %burnpercent% = 82
-TIMEOUT 0.2
+TIMEOUT 1
 set %burnpercent% = 90
-TIMEOUT 0.2
+TIMEOUT 1
 set %burnpercent% = 96
-TIMEOUT 0.2
+TIMEOUT 1
 set %burnpercent% = 100
-TIMEOUT 0.2
+TIMEOUT 1
 echo Orbital burn done.
 goto :orbitmenu
 :orbitmenu
