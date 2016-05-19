@@ -299,8 +299,14 @@ if %orbitmenu% = 3 goto :orbitlow
 if %orbitmenu% = 4 goto :moontransfer
 if %orbitmenu% = 5 goto :planetarytransfer
 if %orbitmenu% = 6 goto :stellartransfer
-if %orbitmenu% = 7 echo %money%
+if %orbitmenu% = 7 goto :moneycheck
 if %orbitmenu% = 8 goto :landing
+:orbitlow
+:orbithigh
+:moneycheck
+echo %money%
+pause
+goto :orbitmenu
 :experimentconduct1
 echo What experiment would you like to do?
 echo 1. Rocket Science
@@ -475,7 +481,7 @@ goto :experimentconduct1
 :moon
 echo 00:00:20 - Launch
 echo 00:14:29 - Achieve orbit
-echo 00:28:28 - Achieve tranfer
+echo 00:28:28 - Achieve transfer
 echo 00:34:17 - 2:10:24:16.351 (2 days 10 hours 24 minutes 16.351 seconds) Travel to Moon
 echo 2:10:24:30.128-2:10:52:17.236: Land on Moon
 pause
