@@ -9,13 +9,17 @@
 :: v0.0.2.2 - hotfix
 :: v0.0.3 - shop system implementation
 :: v0.0.3.5 - shop implementation pt 2
+:: v0.0.3.6 - hotfix
+:: v0.0.4 "Orbit" - Allow Earth orbit to be reached and add 8 money.
 :GAMEVAR
-set /a money=450
+set /a money=20000
+set /a speed=0
+set /a burnpercent=0
 @ECHO OFF
-title Dysnomia [v0.0.3.5]
+title Dysnomia [v0.0.4.0]
 :LOGWRITE
-set GameVersion=v0.0.3.5
-echo Game Version=%GameVersion%>> dysnomialog.txt
+set GameVersion=v0.0.4.0
+echo Game Version=!GameVersion!>> dysnomialog.txt
 echo Windows Version=%OS%>> dysnomialog.txt
 echo Computer Name=%COMPUTERNAME%>> dysnomialog.txt
 echo Win Root=%SystemRoot%>> dysnomialog.txt
@@ -122,7 +126,177 @@ if %destinations%==proxcen goto :proxcen
 if %destinations%==alphacena goto :alphacena
 if %destinations%==alphacenb goto :alphacenb
 if %destinations%==help goto :help
-
+:earth 
+echo Launching...
+pause
+echo 10...
+pause
+echo 9...
+pause
+echo 8...
+pause
+echo 7...
+pause
+echo 6...
+pause
+echo 5...
+pause 
+echo 4...
+pause
+echo 3...
+pause
+echo 2...
+pause
+echo 1...
+pause
+echo 0...
+pause
+echo And liftoff!
+pause
+echo speed=%speed%
+set speed=1119
+TIMEOUT 0.05
+set speed=1512
+TIMEOUT 0.05
+set speed=2026
+TIMEOUT 0.05
+set speed=2661
+TIMEOUT 0.05
+set speed=3227
+TIMEOUT 0.05
+set speed=4083
+TIMEOUT 0.05
+set speed=4882
+TIMEOUT 0.05
+set speed=5661
+TIMEOUT 0.05
+set speed=6072
+TIMEOUT 0.05
+set speed=6819
+TIMEOUT 0.05
+set speed=7551
+TIMEOUT 0.05
+set speed=8360
+TIMEOUT 0.05
+set speed=8891
+TIMEOUT 0.05
+set speed=9256
+TIMEOUT 0.05
+set speed=9774
+TIMEOUT 0.05
+set speed=10405
+TIMEOUT 0.05
+echo 10,000 mph reached. Commencing stage 3 seperation...
+TIMEOUT 0.7
+echo Stage 3 seperated. Weight has fallen from 192.4 to 131.6 tons.
+TIMEOUT 0.05
+set speed=11471
+TIMEOUT 0.05
+set speed=12842
+TIMEOUT 0.05
+set speed=13921
+TIMEOUT 0.05
+set speed=14612
+TIMEOUT 0.05
+set speed=15881
+TIMEOUT 0.05
+set speed=16440
+TIMEOUT 0.05
+set speed=17929
+TIMEOUT 0.05
+set speed=20203
+TIMEOUT 0.05
+set speed=22158
+TIMEOUT 0.05
+set speed=24200
+TIMEOUT 0.05
+echo 24,000 mph reached. Commencing stage 2 seperation...
+TIMEOUT 0.7
+echo Stage 2 seperation complete.
+TIMEOUT 0.05
+set speed=27715
+TIMEOUT 0.05
+set speed=30671
+TIMEOUT 0.05
+set speed=33819
+TIMEOUT 0.05
+set speed=36617
+TIMEOUT 0.05
+set speed=39220
+TIMEOUT 0.05
+echo 39,000 mph reached. Coasting to circualization burn...
+TIMEOUT 0.3
+echo Altitude 160km.
+TIMEOUT 0.3
+echo Altitude 210km.
+TIMEOUT 0.3
+echo Altitude 260km.
+TIMEOUT 0.3
+echo Altitude 310km.
+TIMEOUT 0.3
+echo Altitude 360km.
+TIMEOUT 0.3
+echo Altitude 410km.
+TIMEOUT 0.3
+echo Altitude 450km. Burning for 2,000+-90 km orbit.
+TIMEOUT 1.0
+echo Burn percentage = %burnpercent%
+TIMEOUT 0.2
+set %burnpercent% = 4
+TIMEOUT 0.2
+set %burnpercent% = 11
+TIMEOUT 0.2
+set %burnpercent% = 16
+TIMEOUT 0.2
+set %burnpercent% = 22
+TIMEOUT 0.2
+set %burnpercent% = 25
+TIMEOUT 0.2
+set %burnpercent% = 31
+TIMEOUT 0.2
+set %burnpercent% = 35
+TIMEOUT 0.2
+set %burnpercent% = 40
+TIMEOUT 0.2
+set %burnpercent% = 48
+TIMEOUT 0.2
+set %burnpercent% = 55
+TIMEOUT 0.2
+set %burnpercent% = 61
+TIMEOUT 0.2
+set %burnpercent% = 67
+TIMEOUT 0.2
+set %burnpercent% = 75
+TIMEOUT 0.2
+set %burnpercent% = 82
+TIMEOUT 0.2
+set %burnpercent% = 90
+TIMEOUT 0.2
+set %burnpercent% = 96
+TIMEOUT 0.2
+set %burnpercent% = 100
+TIMEOUT 0.2
+echo Orbital burn done.
+goto :orbitmenu
+:orbitmenu
+echo Welcome to the Earth Orbital Menu. Choose a option
+echo 1) Conduct experiments
+echo 2) Transfer to higher orbit
+echo 3) Transfer to lower orbit
+echo 4) Go to the Moon
+echo 5) Interplanetary transfer
+echo 6) Interstellar transfer
+echo 7) Check money
+echo 8) Land and return to Mission Control
+set /p orbitmenu=
+if %orbitmenu% = 1 goto :experimentconduct1
+if %orbitmenu% = 2 goto :orbithigh
+if %orbitmenu% = 3 goto :orbitlow
+if %orbitmenu% = 4 goto :moontransfer
+if %orbitmenu% = 5 goto :planetarytransfer
+if %orbitmenu% = 6 goto :stelllartransfer
+if %orbitmenu% = 7 echo %money%
+if %orbitmenu% = 8 goto :landing
 :help 
 echo Destinations: (use NO apostrophes, or capital letters, or spaces). Some of these may not be implemented or have not been unlocked.
 echo Sun
@@ -176,6 +350,7 @@ echo Alpha Centuari B (type alphacenb)
 goto :MISSIONCONTROL
 
 :shop
+cls
 echo What do you want to do?
 echo 1 - Buy planetary reaching technology
 echo 2 - View prices 
