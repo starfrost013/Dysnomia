@@ -200,6 +200,7 @@ set /a titan=360
 set /a iapetus=364
 set /a uranus=626
 set /a miranda=628
+set /a ariel=630
 set /p item="please type what you want: "
 set /a item=%item%
 set /a cost=item
