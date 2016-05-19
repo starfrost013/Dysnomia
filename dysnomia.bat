@@ -8,12 +8,13 @@
 :: v0.0.2.1 - emergency bugfix 
 :: v0.0.2.2 - hotfix
 :: v0.0.3 - shop system implementation
+:: v0.0.3.5 - shop implementation pt 2
 :GAMEVAR
 set /a money=450
 @ECHO OFF
-title Dysnomia [v0.0.3]
+title Dysnomia [v0.0.3.5]
 :LOGWRITE
-set %GameVersion%=v0.0.3
+set GameVersion=v0.0.3.5
 echo Game Version=%GameVersion%>> dysnomialog.txt
 echo Windows Version=%OS%>> dysnomialog.txt
 echo Computer Name=%COMPUTERNAME%>> dysnomialog.txt
@@ -175,7 +176,64 @@ echo Alpha Centuari B (type alphacenb)
 goto :MISSIONCONTROL
 
 :shop
-echo Select a planet to get to
+echo What do you want to do?
+echo 1 - Buy planetary reaching technology
+echo 2 - View prices 
+echo 3 - Go back to mission control.
+set /p crystal=
+if %crystal%==1 goto :planetaryviewreach
+if %crystal%==2 goto :viewprices
+if %crystal%==3 goto :MISSIONCONTROL
+:viewprices
+echo Your money is %money% (also, NO capital letters while typing)
+echo The Moon=5
+echo Mars=24
+echo Venus=37
+echo Deimos=49
+echo Phobos=61
+echo Mercury=80
+echo Sun=110 (hot)
+echo Vesta=125
+echo Ceres=145
+echo Jupiter=245
+echo Io=246
+echo Europa=249
+echo Ganymede=252
+echo Callisto=253
+echo Saturn=345
+echo Mimas=348
+echo Enceladus=350
+echo Tethys=353
+echo Dione=355
+echo Rhea=356
+echo Titan=360
+echo Iapetus=364
+echo Uranus=626
+echo Miranda=628
+echo Ariel=630
+echo Umbriel=632
+echo Titania=634
+echo Oberon=639
+echo Neptune=1600
+echo Triton=1616
+echo Nereid=1632
+echo Pluto=3000
+echo Charon=3007
+echo Nix=3030
+echo Hydra=3032
+echo Kerberos=3036
+echo Styx=3039
+echo Eris=4150
+echo Dysnomia=4154
+echo Haumea=4675
+echo Hiiaka=4681
+echo Namaka=4695
+echo Sedna=8000
+echo Planet Nine (type planetnine)=23750
+echo Proxima Centuari (type proxcen)=125000
+echo Alpha Centuari A (type alphacena)=131450
+echo Alpha Centuari B (type alphacenb)=132000
+:planetaryviewreach
 set /a moon=5
 set /a mars=24
 set /a venus=37
@@ -201,7 +259,29 @@ set /a iapetus=364
 set /a uranus=626
 set /a miranda=628
 set /a ariel=630
-set /p item="please type what you want: "
+set /a umbriel=632
+set /a titania=634
+set /a oberon=639
+set /a neptune=1600
+set /a triton=1616
+set /a nereid=1632
+set /a pluto=3000
+set /a charon=3007
+set /a nix=3030
+set /a hydra=3032
+set /a kerberos=3036
+set /a styx=3039
+set /a eris=4150
+set /a dysnomia=4154
+set /a haumea=4675
+set /a hiiaka=4681
+set /a namaka=4695
+set /a sedna=8000
+set /a planetnine=23750
+set /a proxcen=125000
+set /a alphacena=131450
+set /a alphacenb=132000
+set /p item="Choose a planet to reach."
 set /a item=%item%
 set /a cost=item
 if %money% lss %cost% echo you do not have enough money && goto start
