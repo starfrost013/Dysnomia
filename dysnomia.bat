@@ -233,7 +233,9 @@ echo Planet Nine (type planetnine)=23750
 echo Proxima Centuari (type proxcen)=125000
 echo Alpha Centuari A (type alphacena)=131450
 echo Alpha Centuari B (type alphacenb)=132000
+goto :planetaryviewreach
 :planetaryviewreach
+cls
 set /a moon=5
 set /a mars=24
 set /a venus=37
