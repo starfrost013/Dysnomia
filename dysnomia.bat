@@ -16,14 +16,17 @@
 :: v0.0.5.1 - Bugfix 
 :: v0.0.5.2 - Bugfix Mania #1
 :: v0.0.5.3 - Bugfix Mania #2
+:: v0.0.6 - Added ability to change orbits.
+:: v0.0.7 - Added ability to land and fixed launch sequence
+:: v0.0.7.1 - Added ver hist from v0.0.6-v0.0.7.1, fixed versioning
 :GAMEVAR
 set /a money=2000000
 set /a speed=0
 set /a burnpercent=0
 @ECHO OFF
-title Dysnomia [v0.0.6]
+title Dysnomia [v0.0.7.1]
 :LOGWRITE
-set GameVersion=v0.0.6
+set GameVersion=v0.0.7.1
 echo Game Version=!GameVersion!>> dysnomialog.txt
 echo Windows Version=%OS%>> dysnomialog.txt
 echo Computer Name=%COMPUTERNAME%>> dysnomialog.txt
@@ -37,7 +40,7 @@ echo Cores=%NUMBER_OF_PROCESSORS%>> dysnomialog.txt
 :: title and secret routines go here.
 goto :Title
 :Secret
-echo wrote 14:35 18/05/2016, current date %DATE%!
+echo project started 14:35 18/05/2016, current date %DATE%!
 echo Virus.%DATE%.%TIME%.Severity%RANDOM%.%RANDOM%
 pause
 goto :Title
@@ -83,6 +86,7 @@ if %missionchoice%==2 goto :shop
 if %missionchoice%==3 goto :Title
 if %missionchoice%==4 goto :help
 :destinchoice
+echo Choose a destination. (type help for destinations)
 set /p destinations=
 if %destinations%==sun goto :sun
 if %destinations%==mercury goto :mercury
@@ -786,7 +790,7 @@ if %orbitmenulow%==2 goto :500
 if %orbitmenulow%==3 goto :1000
 if %orbitmenulow%==4 goto :2000
 :orbithigh8
-echo Which orbit do you want to transfer to? You will return to the Earth Orbital Menu afterwards. Current orbit 300000km.
+echo Which orbit do you want to transfer to? You will return to the Earth Orbital Menu afterwards. Current orbit 8000000km.
 echo 8,000km (MEO)
 echo 39,000km (GEO)
 echo 300,000km (SSEO)
