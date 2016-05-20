@@ -24,10 +24,10 @@ set /a money=2000000
 set /a speed=0
 set /a burnpercent=0
 @ECHO OFF
-title Dysnomia [v0.0.7.1]
+title Dysnomia [v0.1]
 :LOGWRITE
 set GameVersion=v0.0.7.1
-echo Game Version=!GameVersion!>> dysnomialog.txt
+echo Game Version=v0.1.0.1>> dysnomialog.txt
 echo Windows Version=%OS%>> dysnomialog.txt
 echo Computer Name=%COMPUTERNAME%>> dysnomialog.txt
 echo Win Root=%SystemRoot%>> dysnomialog.txt
@@ -975,7 +975,7 @@ echo 3) Moon flight
 set /p q6serious=
 if %q6serious%==1 goto :bad
 if %q6serious%==2 goto :good
-if %q6serious%==3 goto :moon
+if %q6serious%==3 goto :moon2
 :bad
 echo Flight Plan:
 echo 00:00:20 - Launch
@@ -998,7 +998,7 @@ goto :experimentconduct1
 echo #ThisIsKSPThereIsNoGoodPlan
 pause
 goto :experimentconduct1
-:moon
+:moon2
 echo 00:00:20 - Launch
 echo 00:14:29 - Achieve orbit
 echo 00:28:28 - Achieve transfer
