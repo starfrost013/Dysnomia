@@ -21,9 +21,9 @@ set /a money=2000000
 set /a speed=0
 set /a burnpercent=0
 @ECHO OFF
-title Dysnomia [v0.0.5.3]
+title Dysnomia [v0.0.5.4]
 :LOGWRITE
-set GameVersion=v0.0.5.3
+set GameVersion=v0.0.5.4
 echo Game Version=!GameVersion!>> dysnomialog.txt
 echo Windows Version=%OS%>> dysnomialog.txt
 echo Computer Name=%COMPUTERNAME%>> dysnomialog.txt
@@ -158,76 +158,75 @@ echo 0...
 pause
 echo And liftoff!
 pause
-echo speed=%speed%
-set speed=1119
+echo speed=1119
 pause
-set speed=1512
+echo speed=1572
 pause
-set speed=2026
+echo speed=2026
 pause
-set speed=2661
+echo speed=2661
 pause
-set speed=3227
+echo speed=3227
 pause
-set speed=4083
+echo speed=4083
 pause
-set speed=4882
+echo speed=4882
 pause
-set speed=5661
+echo speed=5661
 pause
-set speed=6072
+echo speed=6072
 pause
-set speed=6819
+echo speed=6819
 pause
-set speed=7551
+echo speed=7551
 pause
-set speed=8360
+echo speed=8360
 pause
-set speed=8891
+echo speed=8891
 pause
-set speed=9256
+echo speed=9256
 pause
-set speed=9774
+echo speed=9774
 pause
-set speed=10405
+echo speed=10405
 pause
 echo 10,000 mph reached. Commencing stage 3 seperation...
 pause
 echo Stage 3 seperated. Weight has fallen from 192.4 to 131.6 tons.
 pause
-set speed=11471
+echo speed=11471
 pause
-set speed=12842
+echo speed=12842
 pause
-set speed=13921
+echo speed=13921
 pause
-set speed=14612
+echo speed=14612
 pause
-set speed=15881
+echo speed=15881
 pause
-set speed=16440
+echo speed=16440
 pause
-set speed=17929
+echo speed=17929
 pause
-set speed=20203
+echo speed=20203
 pause
-set speed=22158
+echo speed=22158
 pause
-set speed=24200
+echo speed=24200
 pause
 echo 24,000 mph reached. Commencing stage 2 seperation...
 pause
 echo Stage 2 seperation complete.
 pause
-set speed=27715
+echo speed=27715
 pause
-set speed=30671
+echo speed=30671
 pause
-set speed=33819
+echo speed=33819
 pause
-set speed=36617
+echo speed=36617
 pause
-set speed=39220
+echo speed=39220
 pause
 echo 39,000 mph reached. Coasting to circualization burn...
 pause
