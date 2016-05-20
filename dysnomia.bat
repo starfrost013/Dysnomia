@@ -137,6 +137,7 @@ if %destinations%==proxcen goto :proxcen
 if %destinations%==alphacena goto :alphacena
 if %destinations%==alphacenb goto :alphacenb
 if %destinations%==help goto :help
+:: Earth launch, orbital menu, landing...etc start here.
 :earth 
 echo Launching...
 pause
@@ -310,6 +311,22 @@ if %orbitmenu%==5 goto :planetarytransfer
 if %orbitmenu%==6 goto :stellartransfer
 if %orbitmenu%==7 goto :moneycheck
 if %orbitmenu%==8 goto :landing
+:moontransfer
+echo Transferring to Moon...8%.
+pause
+echo Transferring to Moon...19%.
+pause
+echo Transferring to Moon...32%.
+pause
+echo Transferring to Moon...49%.
+pause
+echo Transferring to Moon...60%.
+pause
+echo Transferring to Moon...81%.
+pause
+echo Transferring to Moon...100%.
+pause
+goto :moonorbitalmenu
 :orbitlow
 echo Which orbit do you want to transfer to? You will return to the Earth Orbital Menu afterwards. Current orbit 2000km.
 echo 210km (Low Earth Orbit)
@@ -989,6 +1006,100 @@ echo 00:34:17 - 2:10:24:16.351 (2 days 10 hours 24 minutes 16.351 seconds) Trave
 echo 2:10:24:30.128-2:10:52:17.236: Land on Moon
 pause
 goto :experimentconduct1
+:: ...EarthEndsHere. 
+:moon
+echo Launching Moon rocket. 
+pause
+echo 10...
+pause
+echo 9...
+pause
+echo 8...
+pause
+echo 7...
+pause
+echo 6...
+pause
+echo 5...
+pause
+echo 4...
+pause
+echo 3...
+pause
+echo 2...
+pause
+echo 1...
+pause
+echo Launching Earth-Moon: DirectShoot.
+pause
+echo Scanning software...
+dir
+pause
+echo Found Earth-Moon Express 1.0.0.7.
+pause
+echo Accelerating...
+pause
+echo speed=2234
+pause
+echo speed=6710
+pause
+echo speed=11319
+pause
+echo speed=15277
+pause
+echo speed=19660
+pause
+echo speed=23491
+pause
+echo speed=28982
+pause
+echo speed=32276
+pause
+echo speed=38104
+pause
+echo speed=43615
+pause
+echo speed=50210. Coasting to Moon...0%.
+pause
+echo speed=50157. Coasting to Moon...22%.
+pause
+echo speed=50002. Coasting to Moon...44%
+pause
+echo speed=49927. Coasting to Moon...66%
+pause
+echo speed=49810. Coasting to Moon...88%
+pause
+echo speed=49697. Coasting to Moon...100%.
+pause
+echo speed=49542. Burning to Moon orbit...0%
+pause
+echo speed=44576. Burning to Moon orbit...12%.
+pause
+echo speed=35591. Burning to Moon orbit...26%.
+pause
+echo speed=30153. Burning to Moon orbit...39%.
+pause
+echo speed=24490. Burning to Moon orbit...51%.
+pause
+echo speed=18927. Burning to Moon orbit...67%.
+pause
+echo speed=12290. Burning to Moon orbit...81%.
+pause
+echo speed=5250. Burning to Moon orbit...98%.
+pause
+echo speed=4119. Burning to Moon orbit completed.
+pause
+goto :moonorbitmenu
+:moonorbitmenu
+echo Welcome to the Moon Orbital Menu
+echo 1) Land
+echo 2) Return
+echo 3) Experiments
+set /p moonmenu
+if %moonmenu%==1 goto :moonland
+if %moonmenu%==2 goto :earthshot1
+if %moonmenu%==3 goto :experimentconduct7
+
 :help 
 echo Destinations: (use NO apostrophes, or capital letters, or spaces). Some of these may not be implemented or have not been unlocked.
 echo Sun
