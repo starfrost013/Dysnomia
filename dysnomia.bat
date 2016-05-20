@@ -157,127 +157,127 @@ echo And liftoff!
 pause
 echo speed=%speed%
 set speed=1119
-TIMEOUT 1
+pause
 set speed=1512
-TIMEOUT 1
+pause
 set speed=2026
-TIMEOUT 1
+pause
 set speed=2661
-TIMEOUT 1
+pause
 set speed=3227
-TIMEOUT 1
+pause
 set speed=4083
-TIMEOUT 1
+pause
 set speed=4882
-TIMEOUT 1
+pause
 set speed=5661
-TIMEOUT 1
+pause
 set speed=6072
-TIMEOUT 1
+pause
 set speed=6819
-TIMEOUT 1
+pause
 set speed=7551
-TIMEOUT 1
+pause
 set speed=8360
-TIMEOUT 1
+pause
 set speed=8891
-TIMEOUT 1
+pause
 set speed=9256
-TIMEOUT 1
+pause
 set speed=9774
-TIMEOUT 1
+pause
 set speed=10405
-TIMEOUT 1
+pause
 echo 10,000 mph reached. Commencing stage 3 seperation...
-TIMEOUT 1
+pause
 echo Stage 3 seperated. Weight has fallen from 192.4 to 131.6 tons.
-TIMEOUT 1
+pause
 set speed=11471
-TIMEOUT 1
+pause
 set speed=12842
-TIMEOUT 1
+pause
 set speed=13921
-TIMEOUT 1
+pause
 set speed=14612
-TIMEOUT 1
+pause
 set speed=15881
-TIMEOUT 1
+pause
 set speed=16440
-TIMEOUT 1
+pause
 set speed=17929
-TIMEOUT 1
+pause
 set speed=20203
-TIMEOUT 1
+pause
 set speed=22158
-TIMEOUT 1
+pause
 set speed=24200
-TIMEOUT 1
+pause
 echo 24,000 mph reached. Commencing stage 2 seperation...
-TIMEOUT 1
+pause
 echo Stage 2 seperation complete.
-TIMEOUT 1
+pause
 set speed=27715
-TIMEOUT 1
+pause
 set speed=30671
-TIMEOUT 1
+pause
 set speed=33819
-TIMEOUT 1
+pause
 set speed=36617
-TIMEOUT 1
+pause
 set speed=39220
-TIMEOUT 1
+pause
 echo 39,000 mph reached. Coasting to circualization burn...
-TIMEOUT 1
+pause
 echo Altitude 160km.
-TIMEOUT 1
+pause
 echo Altitude 210km.
-TIMEOUT 1
+pause
 echo Altitude 260km.
-TIMEOUT 1
+pause
 echo Altitude 310km.
-TIMEOUT 1
+pause
 echo Altitude 360km.
-TIMEOUT 1
+pause
 echo Altitude 410km.
-TIMEOUT 1
+pause
 echo Altitude 450km. Burning for 2,000+-90 km orbit.
-TIMEOUT 1.0
+pause.0
 echo Burn percentage = %burnpercent%
-TIMEOUT 1
+pause
 set %burnpercent% = 4
-TIMEOUT 1
+pause
 set %burnpercent% = 11
-TIMEOUT 1
+pause
 set %burnpercent% = 16
-TIMEOUT 1
+pause
 set %burnpercent% = 22
-TIMEOUT 1
+pause
 set %burnpercent% = 25
-TIMEOUT 1
+pause
 set %burnpercent% = 31
-TIMEOUT 1
+pause
 set %burnpercent% = 35
-TIMEOUT 1
+pause
 set %burnpercent% = 40
-TIMEOUT 1
+pause
 set %burnpercent% = 48
-TIMEOUT 1
+pause
 set %burnpercent% = 55
-TIMEOUT 1
+pause
 set %burnpercent% = 61
-TIMEOUT 1
+pause
 set %burnpercent% = 67
-TIMEOUT 1
+pause
 set %burnpercent% = 75
-TIMEOUT 1
+pause
 set %burnpercent% = 82
-TIMEOUT 1
+pause
 set %burnpercent% = 90
-TIMEOUT 1
+pause
 set %burnpercent% = 96
-TIMEOUT 1
+pause
 set %burnpercent% = 100
-TIMEOUT 1
+pause
 echo Orbital burn done.
 echo You have earned 8 Money!
 set money=%money%+8
