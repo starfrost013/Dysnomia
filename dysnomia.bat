@@ -248,39 +248,39 @@ echo Altitude 450km. Burning for 2,000+-90 km orbit.
 pause.0
 echo Burn percentage==%burnpercent%
 pause
-set %burnpercent%==4
+echo burn percent = 4
 pause
-set %burnpercent%==11
+echo burn percent = 11
 pause
-set %burnpercent%==16
+echo burn percent = 16
 pause
-set %burnpercent%==22
+echo burn percent = 22
 pause
-set %burnpercent%==25
+echo burn percent = 25
 pause
-set %burnpercent%==31
+echo burn percent = 31
 pause
-set %burnpercent%==35
+echo burn percent = 35
 pause
-set %burnpercent%==40
+echo burn percent = 40
 pause
-set %burnpercent%==48
+echo burn percent = 48
 pause
-set %burnpercent%==55
+echo burn percent = 55
 pause
-set %burnpercent%==61
+echo burn percent = 61
 pause
-set %burnpercent%==67
+echo burn percent = 67
 pause
-set %burnpercent%==75
+echo burn percent = 75
 pause
-set %burnpercent%==82
+echo burn percent = 82
 pause
-set %burnpercent%==90
+echo burn percent = 90
 pause
-set %burnpercent%==96
+echo burn percent = 96
 pause
-set %burnpercent%==100
+echo burn percent = 100
 pause
 echo Orbital burn done.
 echo You have earned 8 Money!
@@ -323,6 +323,66 @@ set /p orbitmenuhigh=
 if %orbitmenuhigh%==1 goto :8000
 if %orbitmenuhigh%==2 goto :39000
 if %orbitmenuhigh%==3 goto :300000
+:landing
+echo Landing...
+echo Starting deorbit burn...
+pause
+echo Apoapsis Altitude 91% of preburn...
+pause
+echo Altitude 82%...
+pause
+echo Altitude 70%...
+pause
+echo Altitude 58%...
+pause
+echo Altitude 36%...
+pause
+echo Altitude 12%...
+pause
+echo No longer in orbit.
+pause
+echo Burning to correct landing point...Latitude 147 23 19 193 Longtitude 92 23 104 27
+pause
+echo Altitude decreasing.
+pause
+echo In atmosphere.
+pause
+echo 75 seconds to atmospheric reentry, press N to abort and Y to continue.
+set /p atmo1=
+if %atmo1%==y goto :landing2
+if %atmo1%==n goto :abort
+:landing2
+pause
+echo 45 seconds to atmospheric reentry.
+pause
+echo 20 seconds to atmospheric reentry.
+pause
+echo 5. 4. 3. 2. 1.
+pause
+echo Now reentrying atmosphere. 
+pause
+echo Entering mesosphere, ready for landing...
+pause
+echo Landing T-1 minute.
+pause
+echo Landing T-45 seconds, entering stratosphere...
+pause
+echo Landing T-32 seconds, altitude 30km...
+pause
+echo Landing T-19 seconds, altitude 15km...
+pause
+echo Preparing for runway land...
+pause
+echo Touching down, Landing T-4 seconds...
+pause
+echo Landed.
+pause
+goto :MISSIONCONTROL.
+:abort
+echo Landing aborted.
+pause
+goto :orbitmenu
+pause
 :210
 echo Transferring...0%
 pause
