@@ -13,14 +13,17 @@
 :: v0.0.4 "Orbit" - Allow Earth orbit to be reached and add 8 money.
 :: v0.0.4.1 - emergency bugfix
 :: v0.0.5 - "Optiona" Do several options.
+:: v0.0.5.1 - Bugfix 
+:: v0.0.5.2 - Bugfix Mania #1
+:: v0.0.5.3 - Bugfix Mania #2
 :GAMEVAR
-set /a money=200000
+set /a money=2000000
 set /a speed=0
 set /a burnpercent=0
 @ECHO OFF
-title Dysnomia [v0.0.5]
+title Dysnomia [v0.0.5.3]
 :LOGWRITE
-set GameVersion=v0.0.5.0
+set GameVersion=v0.0.5.3
 echo Game Version=!GameVersion!>> dysnomialog.txt
 echo Windows Version=%OS%>> dysnomialog.txt
 echo Computer Name=%COMPUTERNAME%>> dysnomialog.txt
@@ -242,41 +245,41 @@ echo Altitude 410km.
 pause
 echo Altitude 450km. Burning for 2,000+-90 km orbit.
 pause.0
-echo Burn percentage = %burnpercent%
+echo Burn percentage==%burnpercent%
 pause
-set %burnpercent% = 4
+set %burnpercent%==4
 pause
-set %burnpercent% = 11
+set %burnpercent%==11
 pause
-set %burnpercent% = 16
+set %burnpercent%==16
 pause
-set %burnpercent% = 22
+set %burnpercent%==22
 pause
-set %burnpercent% = 25
+set %burnpercent%==25
 pause
-set %burnpercent% = 31
+set %burnpercent%==31
 pause
-set %burnpercent% = 35
+set %burnpercent%==35
 pause
-set %burnpercent% = 40
+set %burnpercent%==40
 pause
-set %burnpercent% = 48
+set %burnpercent%==48
 pause
-set %burnpercent% = 55
+set %burnpercent%==55
 pause
-set %burnpercent% = 61
+set %burnpercent%==61
 pause
-set %burnpercent% = 67
+set %burnpercent%==67
 pause
-set %burnpercent% = 75
+set %burnpercent%==75
 pause
-set %burnpercent% = 82
+set %burnpercent%==82
 pause
-set %burnpercent% = 90
+set %burnpercent%==90
 pause
-set %burnpercent% = 96
+set %burnpercent%==96
 pause
-set %burnpercent% = 100
+set %burnpercent%==100
 pause
 echo Orbital burn done.
 echo You have earned 8 Money!
@@ -293,14 +296,14 @@ echo 6) Interstellar transfer
 echo 7) Check money
 echo 8) Land and return to Mission Control
 set /p orbitmenu=
-if %orbitmenu% = 1 goto :experimentconduct1
-if %orbitmenu% = 2 goto :orbithigh
-if %orbitmenu% = 3 goto :orbitlow
-if %orbitmenu% = 4 goto :moontransfer
-if %orbitmenu% = 5 goto :planetarytransfer
-if %orbitmenu% = 6 goto :stellartransfer
-if %orbitmenu% = 7 goto :moneycheck
-if %orbitmenu% = 8 goto :landing
+if %orbitmenu%==1 goto :experimentconduct1
+if %orbitmenu%==2 goto :orbithigh
+if %orbitmenu%==3 goto :orbitlow
+if %orbitmenu%==4 goto :moontransfer
+if %orbitmenu%==5 goto :planetarytransfer
+if %orbitmenu%==6 goto :stellartransfer
+if %orbitmenu%==7 goto :moneycheck
+if %orbitmenu%==8 goto :landing
 :orbitlow
 :orbithigh
 :moneycheck
@@ -315,11 +318,11 @@ echo 3. Death in space
 echo 4. Moon transfer delta-v needed
 echo 5. Mission planning
 set /p experiment=
-if %experiment% = 1 goto :experimentconduct2
-if %experiment% = 2 goto :experimentconduct3
-if %experiment% = 3 goto :experimentconduct4
-if %experiment% = 4 goto :experimentconduct5
-if %experiment% = 5 goto :kerbal
+if %experiment%==1 goto :experimentconduct2
+if %experiment%==2 goto :experimentconduct3
+if %experiment%==3 goto :experimentconduct4
+if %experiment%==4 goto :experimentconduct5
+if %experiment%==5 goto :kerbal
 :experimentconduct2
 echo You have taken a bag of rocket seeds to the ISS. The other is on Earth. What do you think will happen after they come back down?
 echo 1) They will die
