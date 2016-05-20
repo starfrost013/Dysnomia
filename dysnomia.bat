@@ -291,6 +291,7 @@ echo You have earned 8 Money!
 set money=%money%+8
 goto :orbitmenu
 :orbitmenu
+cls
 echo Welcome to the Earth Orbital Menu. Choose a option
 echo 1) Conduct experiments
 echo 2) Transfer to higher orbit
@@ -381,7 +382,7 @@ echo Touching down, Landing T-4 seconds...
 pause
 echo Landed.
 pause
-goto :MISSIONCONTROL.
+goto :MISSIONCONTROL
 :abort
 echo Landing aborted.
 pause
@@ -406,6 +407,7 @@ echo Transferring complete.
 pause
 goto :orbitmenu2
 :orbitmenu2
+cls
 echo Welcome to the Earth Orbital Menu. Choose a option
 echo 1) Conduct experiments
 echo 2) Transfer to higher orbit
@@ -461,6 +463,7 @@ echo Transferring complete.
 pause
 goto :orbitmenu3
 :orbitmenu3
+cls        
 echo Welcome to the Earth Orbital Menu. Choose a option
 echo 1) Conduct experiments
 echo 2) Transfer to higher orbit
@@ -516,6 +519,7 @@ echo Transferring complete.
 pause
 goto :orbitmenu4
 :orbitmenu4
+cls        
 echo Welcome to the Earth Orbital Menu. Choose a option
 echo 1) Conduct experiments
 echo 2) Transfer to higher orbit
@@ -589,6 +593,7 @@ echo Transferring complete.
 pause
 goto :orbitmenu5
 :orbitmenu5
+cls        
 echo Welcome to the Earth Orbital Menu. Choose a option
 echo 1) Conduct experiments
 echo 2) Transfer to higher orbit
@@ -646,6 +651,7 @@ echo Transferring complete.
 pause
 goto :orbitmenu6
 :orbitmenu6
+cls        
 echo Welcome to the Earth Orbital Menu. Choose a option
 echo 1) Conduct experiments
 echo 2) Transfer to higher orbit
@@ -703,6 +709,7 @@ echo Transferring complete.
 pause
 goto :orbitmenu7
 :orbitmenu7
+cls        
 echo Welcome to the Earth Orbital Menu. Choose a option
 echo 1) Conduct experiments
 echo 2) Transfer to higher orbit
@@ -760,6 +767,7 @@ echo Transferring complete.
 pause
 goto :orbitmenu8
 :orbitmenu8
+cls        
 echo Welcome to the Earth Orbital Menu. Choose a option
 echo 1) Conduct experiments
 echo 2) Transfer to higher orbit
