@@ -24,10 +24,10 @@ set /a money=2000000
 set /a speed=0
 set /a burnpercent=0
 @ECHO OFF
-title Dysnomia [v0.1]
+title Dysnomia [v0.1.1]
 :LOGWRITE
-set GameVersion=v0.0.7.1
-echo Game Version=v0.1.0.1>> dysnomialog.txt
+set GameVersion=v0.1.1
+echo Game Version=v0.1.1>> dysnomialog.txt
 echo Windows Version=%OS%>> dysnomialog.txt
 echo Computer Name=%COMPUTERNAME%>> dysnomialog.txt
 echo Win Root=%SystemRoot%>> dysnomialog.txt
@@ -302,6 +302,7 @@ echo 5) Interplanetary transfer
 echo 6) Interstellar transfer
 echo 7) Check money
 echo 8) Land and return to Mission Control
+echo 9) Crew report
 set /p orbitmenu=
 if %orbitmenu%==1 goto :experimentconduct1
 if %orbitmenu%==2 goto :orbithigh
@@ -311,6 +312,11 @@ if %orbitmenu%==5 goto :planetarytransfer
 if %orbitmenu%==6 goto :stellartransfer
 if %orbitmenu%==7 goto :moneycheck
 if %orbitmenu%==8 goto :landing
+if %orbitmenu%==9 goto :crewreport
+:crewreport
+echo It makes you feel really small...
+pause
+goto :orbitmenu
 :moontransfer
 echo Transferring to Moon...8%.
 pause
@@ -434,6 +440,7 @@ echo 5) Interplanetary transfer
 echo 6) Interstellar transfer
 echo 7) Check money
 echo 8) Land and return to Mission Control
+echo 9) Crew report
 set /p orbitmenu=
 if %orbitmenu%==1 goto :experimentconduct1
 if %orbitmenu%==2 goto :orbithigh2
@@ -443,6 +450,7 @@ if %orbitmenu%==5 goto :planetarytransfer
 if %orbitmenu%==6 goto :stellartransfer
 if %orbitmenu%==7 goto :moneycheck
 if %orbitmenu%==8 goto :landing
+if %orbitmenu%==9 goto :crewreport
 :orbitlow2
 echo Which orbit do you want to transfer to? You will return to the Earth Orbital Menu afterwards. Current orbit 210km.
 echo 500km (Low Earth Orbit)
@@ -490,6 +498,7 @@ echo 5) Interplanetary transfer
 echo 6) Interstellar transfer
 echo 7) Check money
 echo 8) Land and return to Mission Control
+echo 9) Crew report
 set /p orbitmenu=
 if %orbitmenu%==1 goto :experimentconduct1
 if %orbitmenu%==2 goto :orbithigh3
@@ -499,6 +508,7 @@ if %orbitmenu%==5 goto :planetarytransfer
 if %orbitmenu%==6 goto :stellartransfer
 if %orbitmenu%==7 goto :moneycheck
 if %orbitmenu%==8 goto :landing
+if %orbitmenu%==9 goto :crewreport
 :orbitlow3
 echo Which orbit do you want to transfer to? You will return to the Earth Orbital Menu afterwards. Current orbit 500km.
 echo 210km (Low Earth Orbit)
@@ -546,6 +556,7 @@ echo 5) Interplanetary transfer
 echo 6) Interstellar transfer
 echo 7) Check money
 echo 8) Land and return to Mission Control
+echo 9) Crew report
 set /p orbitmenu=
 if %orbitmenu%==1 goto :experimentconduct1
 if %orbitmenu%==2 goto :orbithigh4
@@ -555,6 +566,7 @@ if %orbitmenu%==5 goto :planetarytransfer
 if %orbitmenu%==6 goto :stellartransfer
 if %orbitmenu%==7 goto :moneycheck
 if %orbitmenu%==8 goto :landing
+if %orbitmenu%==9 goto :crewreport
 :orbitlow4
 echo Which orbit do you want to transfer to? You will return to the Earth Orbital Menu afterwards. Current orbit 1000km.
 echo 210km (Low Earth Orbit)
@@ -620,6 +632,7 @@ echo 5) Interplanetary transfer
 echo 6) Interstellar transfer
 echo 7) Check money
 echo 8) Land and return to Mission Control
+echo 9) Crew report
 set /p orbitmenu=
 if %orbitmenu%==1 goto :experimentconduct1
 if %orbitmenu%==2 goto :orbithigh5
@@ -629,6 +642,7 @@ if %orbitmenu%==5 goto :planetarytransfer
 if %orbitmenu%==6 goto :stellartransfer
 if %orbitmenu%==7 goto :moneycheck
 if %orbitmenu%==8 goto :landing
+if %orbitmenu%==9 goto :crewreport
 :orbitlow5
 echo Which orbit do you want to transfer to? You will return to the Earth Orbital Menu afterwards. Current orbit 8000km.
 echo 210km (Low Earth Orbit)
@@ -678,6 +692,7 @@ echo 5) Interplanetary transfer
 echo 6) Interstellar transfer
 echo 7) Check money
 echo 8) Land and return to Mission Control
+echo 9) Crew report
 set /p orbitmenu=
 if %orbitmenu%==1 goto :experimentconduct1
 if %orbitmenu%==2 goto :orbithigh6
@@ -687,6 +702,7 @@ if %orbitmenu%==5 goto :planetarytransfer
 if %orbitmenu%==6 goto :stellartransfer
 if %orbitmenu%==7 goto :moneycheck
 if %orbitmenu%==8 goto :landing
+if %orbitmenu%==9 goto :crewreport
 :orbitlow6
 echo Which orbit do you want to transfer to? You will return to the Earth Orbital Menu afterwards. Current orbit 39000km.
 echo 210km (Low Earth Orbit)
@@ -736,6 +752,7 @@ echo 5) Interplanetary transfer
 echo 6) Interstellar transfer
 echo 7) Check money
 echo 8) Land and return to Mission Control
+echo 9) Crew report
 set /p orbitmenu=
 if %orbitmenu%==1 goto :experimentconduct1
 if %orbitmenu%==2 goto :orbithigh6
@@ -745,6 +762,7 @@ if %orbitmenu%==5 goto :planetarytransfer
 if %orbitmenu%==6 goto :stellartransfer
 if %orbitmenu%==7 goto :moneycheck
 if %orbitmenu%==8 goto :landing
+if %orbitmenu%==9 goto :crewreport
 :orbitlow7
 echo Which orbit do you want to transfer to? You will return to the Earth Orbital Menu afterwards. Current orbit 300000km.
 echo 210km (Low Earth Orbit)
@@ -794,6 +812,7 @@ echo 5) Interplanetary transfer
 echo 6) Interstellar transfer
 echo 7) Check money
 echo 8) Land and return to Mission Control
+echo 9) Crew report
 set /p orbitmenu=
 if %orbitmenu%==1 goto :experimentconduct1
 if %orbitmenu%==2 goto :orbithigh6
@@ -803,6 +822,7 @@ if %orbitmenu%==5 goto :planetarytransfer
 if %orbitmenu%==6 goto :stellartransfer
 if %orbitmenu%==7 goto :moneycheck
 if %orbitmenu%==8 goto :landing
+if %orbitmenu%==9 goto :crewreport
 :orbitlow8
 echo Which orbit do you want to transfer to? You will return to the Earth Orbital Menu afterwards. Current orbit 8000000km.
 echo 210km (Low Earth Orbit)
@@ -1091,15 +1111,235 @@ echo speed=4119. Burning to Moon orbit completed.
 pause
 goto :moonorbitmenu
 :moonorbitmenu
-echo Welcome to the Moon Orbital Menu
+echo Welcome to the Moon Orbital Menu. Choose a option.
 echo 1) Land
 echo 2) Return
 echo 3) Experiments
+echo 4) Crew report
 set /p moonmenu
 if %moonmenu%==1 goto :moonland
 if %moonmenu%==2 goto :earthshot1
 if %moonmenu%==3 goto :experimentconduct7
-
+if %moonmenu%==4 goto :crewreportm
+:crewreportm
+echo It seems to be very quiet and serene up here
+pause
+goto :moonorbitmenu
+:experimentconduct7
+echo Which one?
+echo 1) Low grav effects
+echo 2) DolphinDive@Moon
+set /p experiment39=
+if %experiment39%==1 goto :lowgrav
+if %experiment39%==2 goto :dolphin
+:lowgrav
+echo Your bones and muscles waste away...
+pause
+goto :experimentconduct7
+:dolphin
+echo How far can you jump?
+echo 1) 80cm
+echo 2) 9,001km
+echo 3) 5m
+echo 4) 3m
+set /p experiment19=
+if %experiment18%==1 goto :wrong8
+if %experiment18%==2 goto :wrong9
+if %experiment18%==3 goto :yay3
+if %experiment18%==4 goto :wrong10
+:wrong8
+echo YOU. FAILED.
+pause
+goto :dolphin
+:wrong9
+echo YOU. FAILED.
+pause
+goto :dolphin
+:yay3
+echo YOU.WIN
+pause
+goto :experimentconduct7
+:wrong10
+echo YOU. FAILED.
+pause
+goto :dolphin
+:earthshot1
+echo Leaving moon orbit...
+pause
+echo Moon orbit 3,800+-180km.
+pause
+echo Moon orbit 5,200+-400km.
+pause
+echo Moon orbit 8,900+-1,300km.
+pause
+echo Moon orbit 12,250+-1,900km.
+pause
+echo Moon orbit 16,700+-2,600km.
+pause
+echo Moon orbit 22,300+-3,400km.
+pause
+echo Moon escape...T-2 hours.
+pause
+echo Moon escape...T-90 minutes.
+pause
+echo Moon escape...T-1 hour.
+pause
+echo Moon escape...T-30 minutes.
+pause
+echo Moon escape...T-10 minutes.
+pause
+echo Moon escape...T-1 minute.
+pause
+echo Moon escape...T-1 second.
+pause
+echo Moon escaped.
+pause
+echo In 272,000+-91,000km earth orbit.
+pause
+echo In 223,000+-56,000km earth orbit.
+pause
+echo In 201,000+-31,000km earth orbit.
+pause
+echo In 152,000+-20,000km earth orbit
+pause
+echo In 91,000+-10,500km earth orbit.
+pause
+echo In 52,000+-4,000km earth orbit.
+pause
+echo In 30,000+-2,200km earth orbit.
+pause
+echo In 10,000+-900km earth orbit.
+pause
+echo In 4,800+-225km earth orbit.
+pause
+echo In 2,000+-90km earth orbit.
+pause
+echo Earth orbit reach
+pause
+goto :orbitmenu
+:crewreportm
+echo It seems to be very serene up here.
+pause
+goto :moonorbitmenu
+:moonland
+echo Landing on moon...Deorbit burn 23%.
+pause
+echo Landing on moon...Deorbit burn 47%.
+pause
+echo Landing on moon...Deorbit burn 69.69%.
+pause
+echo Landing on moon...Deorbit burn 86%.
+pause
+echo Landing on moon...Deorbit burn 100%.
+pause
+echo No longer in orbit.
+pause
+echo Altitude 600km.
+pause
+echo Landing T-1 minute, altitude 475km.
+pause
+echo Landing T-38 seconds, altitude 200km.
+pause
+echo Landing T-14 seconds, altitude 75km.
+pause
+echo Landing in 5...
+pause
+echo 4... 
+pause
+echo 3...
+pause
+echo 2...
+pause
+echo 1...
+pause
+echo 0...
+pause 
+echo Moon landing completed.
+pause 
+goto :moonsurfacemenu
+:moonsurfacemenu
+echo Welcome to the Moon Surface Menu. What do you want to do?
+echo 1) Launch-to-orbit
+echo 2) Conduct experiments
+echo 3) Surface sample
+set /p moonmenu2=
+if %moonmenu2%==1 goto :orbitallaunch
+if %moonmenu2%==2 goto :experimentconduct10
+if %moonmenu2%==3 goto :surfacesample
+:surfacesample
+echo It's very powdery
+pause
+goto :moonsurfacemenu
+:orbitallaunch
+echo Launching in 10...
+pause
+echo 9...
+pause
+echo 8...
+pause
+echo 7...
+pause
+echo 6...
+pause
+echo 5...
+pause
+echo 4...
+pause
+echo 3...
+pause
+echo 2...
+pause
+echo 1...
+pause
+echo Liftoff!
+pause Altitude 10km.
+echo 30km.
+pause
+echo 60km.
+pause
+echo 90km.
+pause
+echo 200km. MoonBoost2 engine activated.
+pause
+echo 500km.
+pause
+echo 750km.
+pause
+echo 1000km.
+pause
+echo 1250km.
+pause
+echo 1500km.
+pause
+echo Starting orbital burn.
+pause
+echo Orbital burn 8%.
+pause
+echo Orbital burn 16%.
+pause
+echo Orbital burn 24%.
+pause
+echo Orbital burn 32%.
+pause
+echo Orbital burn 40%.
+pause
+echo Orbital burn 48%.
+pause
+echo Orbital burn 56%.
+pause
+echo Orbital burn 64%.
+pause
+echo Orbital burn 72%.
+pause
+echo Orbital burn 80%.
+pause
+echo Orbital burn 88%.
+pause
+echo Orbital burn 96%.
+pause
+echo Orbital burn done.
+pause
+goto :moonorbitmenu
 :help 
 echo Destinations: (use NO apostrophes, or capital letters, or spaces). Some of these may not be implemented or have not been unlocked.
 echo Sun
