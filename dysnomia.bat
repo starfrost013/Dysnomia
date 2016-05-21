@@ -336,7 +336,7 @@ echo Transferring to Moon...81%.
 pause
 echo Transferring to Moon...100%.
 pause
-goto :moonorbitalmenu
+goto :moonorbitmenu
 :orbitlow
 echo Which orbit do you want to transfer to? You will return to the Earth Orbital Menu afterwards. Current orbit 2000km.
 echo 210km (Low Earth Orbit)
