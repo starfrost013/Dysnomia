@@ -1112,7 +1112,8 @@ pause
 echo speed=5250. Burning to Moon orbit...98%.
 pause
 echo speed=4119. Burning to Moon orbit completed.
-goto :moonorbitmenu
+pause
+goto moonorbitmenu
 :moonorbitmenu
 cls
 echo Welcome to the Moon Orbital Menu. Choose a option.
