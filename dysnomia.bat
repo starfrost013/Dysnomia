@@ -16,11 +16,15 @@
 :: v0.0.5.1 - Bugfix 
 :: v0.0.5.2 - Bugfix Mania #1
 :: v0.0.5.3 - Bugfix Mania #2
+:: v0.0.5.4 - Bugfix Mania #3
 :: v0.0.6 - Added ability to change orbits.
 :: v0.0.7 - Added ability to land and fixed launch sequence
 :: v0.0.7.1 - Added ver hist from v0.0.6-v0.0.7.1, fixed versioning
+:: v0.1 - Add moon
+:: v0.1.1 - Add moon experiments, moon landing
+:: v0.1.1.1 - Em.Bugfix.
 :GAMEVAR
-set /a money=2000000
+set /a money=20000000
 set /a speed=0
 set /a burnpercent=0
 @ECHO OFF
@@ -1108,9 +1112,9 @@ pause
 echo speed=5250. Burning to Moon orbit...98%.
 pause
 echo speed=4119. Burning to Moon orbit completed.
-pause
 goto :moonorbitmenu
 :moonorbitmenu
+cls
 echo Welcome to the Moon Orbital Menu. Choose a option.
 echo 1) Land
 echo 2) Return
