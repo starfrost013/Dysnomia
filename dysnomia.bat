@@ -1030,7 +1030,6 @@ echo 00:34:17 - 2:10:24:16.351 (2 days 10 hours 24 minutes 16.351 seconds) Trave
 echo 2:10:24:30.128-2:10:52:17.236: Land on Moon
 pause
 goto :experimentconduct1
-:: ...EarthEndsHere. 
 :moon
 echo Launching Moon rocket. 
 pause
@@ -1113,8 +1112,8 @@ echo speed=5250. Burning to Moon orbit...98%.
 pause
 echo speed=4119. Burning to Moon orbit completed.
 pause
-goto moonorbitmenu
-:moonorbitmenu
+goto :moonorbitalmenu
+:moonorbitalmenu
 cls
 echo Welcome to the Moon Orbital Menu. Choose a option.
 echo 1) Land
@@ -1127,9 +1126,9 @@ if %moonmenu%==2 goto :earthshot1
 if %moonmenu%==3 goto :experimentconduct7
 if %moonmenu%==4 goto :crewreportm
 :crewreportm
-echo It seems to be very quiet and serene up here
+echo It seems to be very quiet and serene up here.
 pause
-goto :moonorbitmenu
+goto :moonorbitalmenu
 :experimentconduct7
 echo Which one?
 echo 1) Low grav effects
@@ -1225,7 +1224,7 @@ goto :orbitmenu
 :crewreportm
 echo It seems to be very serene up here.
 pause
-goto :moonorbitmenu
+goto :moonorbitalmenu
 :moonland
 echo Landing on moon...Deorbit burn 23%.
 pause
@@ -1526,28 +1525,10 @@ echo Github repo link: https://github.com/DarkKnight64/Dysnomia
 pause
 goto :title
 :gupdate
-echo Game Update - v0.0.6-v0.0.7 
-echo Checking for Dysnomia v0.0.7
-cd..
-cd..
-cd..
-cd..
-cd..
-cd..
-cd..
-cd..
-cd..
-cd..
-cd..
-dir/s
-if found dysnomiav0.0.7.bat goto :updroutine
-if not found dysnomiav0.0.7.bat goto :noupd
-:noupd
-echo No update needed at this time.
-:updroutine
-echo UpdatingDysnomia...
-start dysnomiav0.0.7.bat
-echo Dysnomia has been updated.
+echo Game Update
+echo Download location: C:
+bitsadmin /transfer dysnomia_downloadjob /download /priority normal https://github.com/DarkKnight64/Dysnomia/archive/master.zip C:
+echo The latest version of Dysnomia has been downloaded.
 TIMEOUT 3
 exit
 
