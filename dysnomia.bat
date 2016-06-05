@@ -1525,10 +1525,8 @@ echo Github repo link: https://github.com/DarkKnight64/Dysnomia
 pause
 goto :title
 :gupdate
-echo Game Update
-echo Download location: C:
-bitsadmin /transfer dysnomia_downloadjob /download /priority normal https://github.com/DarkKnight64/Dysnomia/archive/master.zip C:
-echo The latest version of Dysnomia has been downloaded.
-TIMEOUT 3
+echo Updating Dysnomia...
+cscript.exe dysnomiaupdate.vbs
+echo done.
+TIMEOUT 4
 exit
-
