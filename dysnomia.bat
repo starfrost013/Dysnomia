@@ -25,15 +25,18 @@
 :: v0.1.1.1 - Attempted to fix Moon Orbital Menu #1
 :: v0.1.1.5 - Rewrote GameUpdate
 :: v0.1.1.6 - Minor bugfixes, attempted to fix Moon Orbital Menu #2
+:: v0.1.1.7 - Actually fixed Moon Orbital Menu
+:: v0.1.2 - Finished Moon
+:: v0.1.3 - Added Mars and Mars Orbital Menu
 :GAMEVAR
 set /a money=20000000
 set /a speed=0
 set /a burnpercent=0
 @ECHO OFF
-title Dysnomia [v0.1.1]
+title Dysnomia [v0.1.3]
 :LOGWRITE
-set GameVersion=v0.1.1.6
-echo Game Version=v0.1.1.6 >> dysnomialog.txt
+set GameVersion=v0.1.3
+echo Game Version=v0.1.3 >> dysnomialog.txt
 echo Windows Version=%OS%>> dysnomialog.txt
 echo Computer Name=%COMPUTERNAME%>> dysnomialog.txt
 echo Win Root=%SystemRoot%>> dysnomialog.txt
@@ -1398,6 +1401,128 @@ pause
 echo Orbital burn done.
 pause
 goto :moonorbitmenu
+:mars
+echo Launching...
+pause
+echo 34km. speed=36731
+pause
+echo 92km. speed=67124
+pause
+echo 319km. speed=131013
+pause
+echo 717km. speed=221934
+pause
+echo 3000km. speed=351898
+pause
+echo 9000km. speed=522171.
+pause
+echo Earth escape T-7 days, speed=751925
+pause
+echo Earth escape T-3 days, speed=751262
+pause
+echo Earth escape T-1 day, speed=750310
+pause
+echo Earth escape T-12 hours, speed=749562
+pause
+echo Earth escape T-6 hours, speed=748881
+pause
+echo Earth escape T-3 hours, speed=748290
+pause
+echo Earth escape T-1 hour, speed=748020
+pause
+echo Earth escape T-30 minutes, speed=747926
+pause
+echo Earth escape T-10 minutes, speed=747919
+pause
+echo Earth escape T-1 minute, speed=747916
+pause
+echo Earth escape T-1 second, speed=747915.29837137
+pause
+echo Earth escaped.
+pause
+echo 50 mins to Mars capture window.
+pause
+echo 20 mins to Mars capture window.
+pause
+echo 1 minute to Mars capture window.
+pause
+echo 1 second to Mars capture window.
+pause
+echo Burning to Mars encounter...4%.
+pause
+echo Burning to Mars encounter...19%.
+pause
+echo Burning to Mars encounter...38%.
+pause
+echo Burning to Mars encounter...56%.
+pause
+echo Burning to Mars encounter...78%.
+pause
+echo Burning to Mars encounter...92%.
+pause
+echo Burning to Mars encounter...100% complete.
+pause
+echo Mars encounter T-117.4 days, speed=1631431
+pause
+echo Mars encounter T-35 days, speed=1185183
+pause
+echo Mars encounter T-10 days, speed=927151
+pause
+echo Mars encounter T-1 day, speed=884410
+pause
+echo Mars encounter T-12 hours, speed=781522
+pause
+echo Mars encounter T-6 hours, speed=767102
+pause
+echo Mars encounter T-3 hours, speed=765551
+pause
+echo Mars encounter T-1 hour, speed=763888
+pause
+echo Mars encounter T-30 minutes, speed=762836
+pause
+echo Mars encounter T-10 minutes, speed=762419
+pause
+echo Mars encounter T-1 minute, speed=762194
+pause
+echo Mars encounter T-1 second, speed=761995
+pause
+echo Mars has been encountered.
+pause
+echo Distance 19,650,450km.
+pause
+echo Distance 10,222,519km.
+pause
+echo Distance 7,450,323km.
+pause
+echo Distance 5,661,247km. Burning to Mars orbit, 0%.
+pause
+echo Distance 4,173,661km. Burning to Mars orbit, 27%.
+pause
+echo Distance 3,220,417km. Burning to Mars orbit, 51%.
+pause
+echo Distance 2,550,124km. Burning to Mars orbit, 72%.
+pause
+echo Distance 1,503,227km. Burning to Mars orbit, 98%.
+pause
+echo Distance 928,441km. Burning to Mars orbit, 100%.
+pause
+echo In 8,000km+-800km orbit.
+pause
+goto :marsorbitalmenu
+:marsorbitalmenu
+echo Welcome to the Mars Orbit Menu. Choose a option
+echo 1) Go EVA
+echo 2) Crew Report
+echo 3) Return to Earth
+echo 4) Land
+set /p marsmenu=
+if %marsmenu%==1 goto :marseva
+if %marsmenu%==2 goto :crewreportma
+if %marsmenu%==3 goto :earthshot2
+if %marsmenu%==4 goto :marslanding
+:crewreportma
+echo Wow, it's very...red. The planet looks so dead.
+
 :help 
 echo Destinations: (use NO apostrophes, or capital letters, or spaces). Some of these may not be implemented or have not been unlocked.
 echo Sun
