@@ -22,7 +22,9 @@
 :: v0.0.7.1 - Added ver hist from v0.0.6-v0.0.7.1, fixed versioning
 :: v0.1 - Add moon
 :: v0.1.1 - Add moon experiments, moon landing
-:: v0.1.1.1 - Em.Bugfix.
+:: v0.1.1.1 - Attempted to fix Moon Orbital Menu #1
+:: v0.1.1.5 - Rewrote GameUpdate
+:: v0.1.1.6 - Minor bugfixes, attempted to fix Moon Orbital Menu #2
 :GAMEVAR
 set /a money=20000000
 set /a speed=0
@@ -30,8 +32,8 @@ set /a burnpercent=0
 @ECHO OFF
 title Dysnomia [v0.1.1]
 :LOGWRITE
-set GameVersion=v0.1.1
-echo Game Version=v0.1.1>> dysnomialog.txt
+set GameVersion=v0.1.1.6
+echo Game Version=v0.1.1.6 >> dysnomialog.txt
 echo Windows Version=%OS%>> dysnomialog.txt
 echo Computer Name=%COMPUTERNAME%>> dysnomialog.txt
 echo Win Root=%SystemRoot%>> dysnomialog.txt
@@ -1120,7 +1122,7 @@ echo 1) Land
 echo 2) Return
 echo 3) Experiments
 echo 4) Crew report
-set /p moonmenu
+set /p moonmenu=
 if %moonmenu%==1 goto :moonland
 if %moonmenu%==2 goto :earthshot1
 if %moonmenu%==3 goto :experimentconduct7
@@ -1218,7 +1220,7 @@ echo In 4,800+-225km earth orbit.
 pause
 echo In 2,000+-90km earth orbit.
 pause
-echo Earth orbit reach
+echo Earth orbit reached
 pause
 goto :orbitmenu
 :crewreportm
