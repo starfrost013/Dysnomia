@@ -1134,12 +1134,32 @@ goto :moonorbitalmenu
 :experimentconduct7
 echo Which one?
 echo 1) Low grav effects
-echo 2) DolphinDive@Moon
+echo 2) Dolphin dives at the moon.
+echo 3) How far can you jump?
 set /p experiment39=
 if %experiment39%==1 goto :lowgrav
 if %experiment39%==2 goto :dolphin
+if %experiment39%==3 goto :moonjump
+:moonjump
+echo You prepare for the jump.
+pause
+echo 3...
+pause
+echo 2...
+pause
+echo 1...
+pause
+echo Go!
+pause
+echo You can jump so high, 6 times higher than on Earth.
+pause
+echo You are going down...
+pause
+echo You've landed!
+pause
+goto :experimentconduct7
 :lowgrav
-echo Your bones and muscles waste away...
+echo Your bones and muscles waste away...but they don't do it as fast as they would do if you were in space.
 pause
 goto :experimentconduct7
 :dolphin
@@ -1149,10 +1169,10 @@ echo 2) 9,001km
 echo 3) 5m
 echo 4) 3m
 set /p experiment19=
-if %experiment18%==1 goto :wrong8
-if %experiment18%==2 goto :wrong9
-if %experiment18%==3 goto :yay3
-if %experiment18%==4 goto :wrong10
+if %experiment19%==1 goto :wrong8
+if %experiment19%==2 goto :wrong9
+if %experiment19%==3 goto :yay3
+if %experiment19%==4 goto :wrong10
 :wrong8
 echo YOU. FAILED.
 pause
@@ -1162,7 +1182,7 @@ echo YOU. FAILED.
 pause
 goto :dolphin
 :yay3
-echo YOU.WIN
+echo Awesome, you got it right!
 pause
 goto :experimentconduct7
 :wrong10
@@ -1224,9 +1244,9 @@ echo Earth orbit reached
 pause
 goto :orbitmenu
 :crewreportm
-echo It seems to be very serene up here.
+echo It seems to be very serene up here...I like it.
 pause
-goto :moonorbitalmenu
+goto :moonorbitmenu
 :moonland
 echo Landing on moon...Deorbit burn 23%.
 pause
@@ -1272,8 +1292,39 @@ set /p moonmenu2=
 if %moonmenu2%==1 goto :orbitallaunch
 if %moonmenu2%==2 goto :experimentconduct10
 if %moonmenu2%==3 goto :surfacesample
+:experimentconduct10
+echo Which experiment would you like to do?
+echo 1) Moon rocks.
+echo 2) Trying to find where you are.
+echo 3) Falling
+set /p experiment72=
+if %experiment72%==1 goto :moonrocks
+if %experiment72%==2 goto :whereareyou
+if %experiment72%==3 goto :moonfall
+:moonrocks
+echo You grab some moon rocks to take back to the ship.
+pause
+goto :experimentconduct10
+:whereareyou
+echo Scooby Doo Where Are You?
+cls
+echo You look at the map.
+pause
+echo You are in the Mare Tranqulitum, a ancient lava flow.
+pause
+echo You can see the Apollo 11 landing site a few kilometers away.
+pause
+echo You feel so...strange.
+pause
+goto :experimentconduct10
+:moonfall
+echo A creaking sound starts. You start to get a little uneasy.
+pause
+echo A massive sinkhole opens. You fall but regain your balance.
+pause
+echo You return to your ship and some less powdery ground.
 :surfacesample
-echo It's very powdery
+echo It's very powdery and you can almost feel it...moving.
 pause
 goto :moonsurfacemenu
 :orbitallaunch
@@ -1298,6 +1349,7 @@ pause
 echo 1...
 pause
 echo Liftoff!
+pause
 pause Altitude 10km.
 echo 30km.
 pause
@@ -1410,7 +1462,7 @@ if %crystal%==2 goto :viewprices
 if %crystal%==3 goto :MISSIONCONTROL
 :viewprices
 echo Your money is %money% (also, NO capital letters while typing)
-echo The Moon=5
+echo Moon=5
 echo Mars=24
 echo Venus=37
 echo Deimos=49
@@ -1510,7 +1562,7 @@ set /a alphacenb=132000
 set /p item="Choose a planet to reach."
 set /a item=%item%
 set /a cost=item
-if %money% lss %cost% echo you do not have enough money && goto start
+if %money% lss %cost% echo you do not have enough money && goto viewprices 
 set /a money=money-item
 :show
 echo %money%
