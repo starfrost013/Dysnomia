@@ -1522,7 +1522,8 @@ if %marsmenu%==3 goto :earthshot2
 if %marsmenu%==4 goto :marslanding
 :crewreportma
 echo Wow, it's very...red. The planet looks so dead.
-
+pause
+goto :marsorbitalmenu
 :help 
 echo Destinations: (use NO apostrophes, or capital letters, or spaces). Some of these may not be implemented or have not been unlocked.
 echo Sun
