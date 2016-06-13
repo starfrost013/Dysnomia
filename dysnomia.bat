@@ -1520,6 +1520,63 @@ if %marsmenu%==1 goto :marseva
 if %marsmenu%==2 goto :crewreportma
 if %marsmenu%==3 goto :earthshot2
 if %marsmenu%==4 goto :marslanding
+:marseva
+:up1
+echo You can see your ship, floating in the blackness of space.
+pause
+echo Where next?
+echo 1) Down
+echo 2) Back to da ship
+echo 3) Left
+echo 4) Right
+set /p marsevamenu=
+if %marsmenu%==1 goto :down1
+if %marsmenu%==2 goto :marsorbitalmenu
+if %marsmenu%==3 goto :left
+if %marsmenu%==4 goto :right
+
+:down1
+echo You can see your engine, being annoyed that it is somewhat out of service and only barely works`
+pause
+echo Where next?
+echo 1) Down
+echo 2) Back to da ship
+echo 3) Left
+echo 4) Right
+set /p marsevamenu=
+if %marsmenu%==1 goto :down1
+if %marsmenu%==2 goto :marsorbitalmenu
+if %marsmenu%==3 goto :left
+if %marsmenu%==4 goto :right
+
+:left1
+echo You can see Mars, and Phobos.
+pause
+echo Where next?
+echo 1) Down
+echo 2) Back to da ship
+echo 3) Left
+echo 4) Right
+set /p marsevamenu=
+if %marsmenu%==1 goto :down1
+if %marsmenu%==2 goto :marsorbitalmenu
+if %marsmenu%==3 goto :left
+if %marsmenu%==4 goto :right
+
+:down1
+echo You start to go down. Yoiu notice that you are getting close to Mars and hurry back to your ship.
+pause
+echo Where next?
+echo 1) Down
+echo 2) Back to da ship
+echo 3) Left
+echo 4) Right
+set /p marsevamenu=
+if %marsmenu%==1 goto :down1
+if %marsmenu%==2 goto :marsorbitalmenu
+if %marsmenu%==3 goto :left
+if %marsmenu%==4 goto :right
+
 :crewreportma
 echo Wow, it's very...red. The planet looks so dead.
 pause
