@@ -28,6 +28,7 @@
 :: v0.1.1.7 - Actually fixed Moon Orbital Menu
 :: v0.1.2 - Finished Moon
 :: v0.1.3 - Added Mars and Mars Orbital Menu
+:: v0.1.3.5 - Added Mars EVA
 :GAMEVAR
 set /a money=20000000
 set /a speed=0
