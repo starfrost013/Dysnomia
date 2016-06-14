@@ -29,6 +29,7 @@
 :: v0.1.2 - Finished Moon
 :: v0.1.3 - Added Mars and Mars Orbital Menu
 :: v0.1.3.5 - Added Mars EVA
+:: v0.1.3.5-14/06/2016 11:26 - pulled dev branch, master branch will stay at v0.1.3.5 until a stable alpha-2 is done.
 :GAMEVAR
 set /a money=20000000
 set /a speed=0
@@ -36,8 +37,8 @@ set /a burnpercent=0
 @ECHO OFF
 title Dysnomia [v0.1.3]
 :LOGWRITE
-set GameVersion=v0.1.3
-echo Game Version=v0.1.3 >> dysnomialog.txt
+set GameVersion=v0.1.4
+echo Game Version=v0.1.4 >> dysnomialog.txt
 echo Windows Version=%OS%>> dysnomialog.txt
 echo Computer Name=%COMPUTERNAME%>> dysnomialog.txt
 echo Win Root=%SystemRoot%>> dysnomialog.txt
@@ -1521,7 +1522,46 @@ if %marsmenu%==1 goto :marseva
 if %marsmenu%==2 goto :crewreportma
 if %marsmenu%==3 goto :earthshot2
 if %marsmenu%==4 goto :marslanding
+:earthshot2
+echo In 12,000km+-2,000km orbit
+pause
+echo In 23,000km+-3,800km orbit
+pause
+echo In 41,000km+-7,000km orbit
+pause
+echo In 82,000km+-15,000km orbit.
+pause
+echo In 167,000km+-28,000km orbit.
+pause
+echo In 414,000km+-63,000km orbit.
+pause
+echo In 1,121,450km+-112,000km orbit.
+pause
+echo In 3,660,311km+-221,000km orbit.
+pause
+echo In 14,139,770km+-410,000km orbit.
+pause
+echo In 52,000,000km+-1,300,000km orbit.
+pause
+echo Mars escape T-2 days.
+pause
+echo Mars escape T-16 hours.
+pause
+echo Mars escape T-5 hours.
+pause
+echo Mars escape T-45 minutes.
 :marseva
+echo Where to go?
+echo 1) Up
+echo 2) Down
+echo 3) Left
+echo 4) Right
+echo 5) Back to da ship
+if %marsmenu%==1 goto :up1
+if %marsmenu%==2 goto :down1
+if %marsmenu%==3 goto :left1
+if %marsmenu%==4 goto :right1
+if %marsmenu%==5 goto :marsorbitalmenu
 :up1
 echo You can see your ship, floating in the blackness of space.
 pause
@@ -1533,9 +1573,8 @@ echo 4) Right
 set /p marsevamenu=
 if %marsmenu%==1 goto :down1
 if %marsmenu%==2 goto :marsorbitalmenu
-if %marsmenu%==3 goto :left
-if %marsmenu%==4 goto :right
-
+if %marsmenu%==3 goto :left1
+if %marsmenu%==4 goto :right1
 :down1
 echo You can see your engine, being annoyed that it is somewhat out of service and only barely works`
 pause
@@ -1547,8 +1586,8 @@ echo 4) Right
 set /p marsevamenu=
 if %marsmenu%==1 goto :down1
 if %marsmenu%==2 goto :marsorbitalmenu
-if %marsmenu%==3 goto :left
-if %marsmenu%==4 goto :right
+if %marsmenu%==3 goto :left1
+if %marsmenu%==4 goto :right1
 
 :left1
 echo You can see Mars, and Phobos.
@@ -1559,10 +1598,10 @@ echo 2) Back to da ship
 echo 3) Left
 echo 4) Right
 set /p marsevamenu=
-if %marsmenu%==1 goto :down1
+if %marsmenu%==1 goto :right1
 if %marsmenu%==2 goto :marsorbitalmenu
-if %marsmenu%==3 goto :left
-if %marsmenu%==4 goto :right
+if %marsmenu%==3 goto :left1
+if %marsmenu%==4 goto :down1
 
 :down1
 echo You start to go down. Yoiu notice that you are getting close to Mars and hurry back to your ship.
@@ -1575,9 +1614,8 @@ echo 4) Right
 set /p marsevamenu=
 if %marsmenu%==1 goto :down1
 if %marsmenu%==2 goto :marsorbitalmenu
-if %marsmenu%==3 goto :left
-if %marsmenu%==4 goto :right
-
+if %marsmenu%==3 goto :left1
+if %marsmenu%==4 goto :right1
 :crewreportma
 echo Wow, it's very...red. The planet looks so dead.
 pause
