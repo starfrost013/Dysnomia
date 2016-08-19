@@ -30,15 +30,19 @@
 :: v0.1.3 - Added Mars and Mars Orbital Menu
 :: v0.1.3.5 - Added Mars EVA
 :: v0.1.3.5-14/06/2016 11:26 - pulled dev branch, master branch will stay at v0.1.3.5 until a stable alpha-2 is done.
+:: v0.20.0 - Added Mars stuff
+:: v0.20.1 - Typo corrections...
 :GAMEVAR
 set /a money=20000000
 set /a speed=0
 set /a burnpercent=0
 @ECHO OFF
-title Dysnomia [v0.20.0 Development Version]
+title Dysnomia [v0.20.1 Development Version]
 :LOGWRITE
-set GameVersion=v0.20.0
-echo Game Version=v0.20.0 >> dysnomialog.txt
+echo Dysnomia 
+echo Log Date: %date%
+echo Log Time: %date%
+echo Game Version=v0.20.1 > dysnomialog.txt
 echo Windows Version=%OS%>> dysnomialog.txt
 echo Computer Name=%COMPUTERNAME%>> dysnomialog.txt
 echo Win Root=%SystemRoot%>> dysnomialog.txt
@@ -1779,7 +1783,7 @@ if %marsmenu%==2 goto :marsorbitalmenu
 if %marsmenu%==3 goto :left1
 if %marsmenu%==4 goto :right1
 :down1
-echo You can see your engine, being annoyed that it is somewhat out of service and only barely works`
+echo You can see your engine, being annoyed that it is somewhat out of service and only barely works.
 pause
 echo Where next?
 echo 1) Down
@@ -1807,7 +1811,7 @@ if %marsmenu%==3 goto :left1
 if %marsmenu%==4 goto :down1
 
 :down1
-echo You start to go down. Yoiu notice that you are getting close to Mars and hurry back to your ship.
+echo You start to go down. You notice that you are getting close to Mars and hurry back to your ship.
 pause
 echo Where next?
 echo 1) Down
@@ -1873,6 +1877,8 @@ echo Planet Nine
 echo Proxima Centuari (type proxcen)
 echo Alpha Centuari A (type alphacena)
 echo Alpha Centuari B (type alphacenb)
+echo Press any key to return to Mission Control
+pause >nul
 goto :MISSIONCONTROL
 :: shop goes here
 :shop
