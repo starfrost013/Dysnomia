@@ -1,6 +1,6 @@
 # Dysnomia
 A batch game in which you have to research technology to reach new planets.
-### Current Version: 0.1.3.5, or v0.20.0 Development Version, change branches to "dev"
+### Current Version: 0.1.3.5, or v0.21.5 Development Version, change branches to "dev"
 ### You are currently in the Master branch.
 ### Info
 My first game, which was started on 18 May 2016 and is currently in active development. You can help as well by emailing: mario64crashed@gmail.com, or just start a pull request and I'll merge you over.
