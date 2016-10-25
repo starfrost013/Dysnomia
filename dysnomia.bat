@@ -33,17 +33,18 @@
 :: v0.20.0 - Added Mars stuff
 :: v0.20.1 - Typo corrections...
 :: v0.21.0 - The Great Batch File Seperation 
+:: v0.21.5 - Replaced "pause >nul" with "pause >nul >nul"
 :GAMEVAR
 set /a money=20000000
 set /a speed=0
 set /a burnpercent=0
 @ECHO OFF
-title Dysnomia [v0.21.0 Development Version]
+title Dysnomia [v0.21.1 Development Version]
 :LOGWRITE
 echo Dysnomia 
 echo Log Date: %date%
 echo Log Time: %date%
-echo Game Version=v0.20.1 > dysnomialog.txt
+echo Game Version=v0.21.1 > dysnomialog.txt
 echo Windows Version=%OS%>> dysnomialog.txt
 echo Computer Name=%COMPUTERNAME%>> dysnomialog.txt
 echo Win Root=%SystemRoot%>> dysnomialog.txt
@@ -59,7 +60,7 @@ goto :Title
 echo project started 14:35 18/05/2016, current date %DATE%!
 echo Version 0.21.0 started at 00:36 08/28/2016, current date %DATE%!
 echo Virus.%DATE%.%TIME%.Severity%RANDOM%.%RANDOM%
-pause
+pause >nul
 goto :Title
 :Title
 cls
@@ -79,16 +80,16 @@ if %Gamedate%==anon goto :anon
 if %Ganedate%==461523 goto :Secret
 :anon
 echo WeAreAnonymous%random%ERROR %RANDOM% HACKED. DELETING C:-Z: and A:/B:.
-pause
+pause >nul
 open notepad.exe
 open dysnomia.bat
 open dysnomianext.bat
 :: game routines start here...
 :gamebegin
 echo The day is July 22, 1969. Humanity has gone to the Moon and Apollo 11 is on it's second day. 
-pause
+pause 
 echo America, Europe, and the Soviets are planning Moon missions.
-pause
+pause 
 goto :MISSIONCONTROL
 :MISSIONCONTROL
 cls
@@ -157,153 +158,153 @@ if %destinations%==help goto :help
 :: Earth launch, orbital menu, landing...etc start here.
 :earth 
 echo Launching...
-pause
+pause >nul
 echo 10...
-pause
+pause >nul
 echo 9...
-pause
+pause >nul
 echo 8...
-pause
+pause >nul
 echo 7...
-pause
+pause >nul
 echo 6...
-pause
+pause >nul
 echo 5...
-pause 
+pause >nul 
 echo 4...
-pause
+pause >nul
 echo 3...
-pause
+pause >nul
 echo 2...
-pause
+pause >nul
 echo 1...
-pause
+pause >nul
 echo 0...
-pause
+pause >nul
 echo And liftoff!
-pause
+pause >nul
 echo speed=1119
-pause
+pause >nul
 echo speed=1572
-pause
+pause >nul
 echo speed=2026
-pause
+pause >nul
 echo speed=2661
-pause
+pause >nul
 echo speed=3227
-pause
+pause >nul
 echo speed=4083
-pause
+pause >nul
 echo speed=4882
-pause
+pause >nul
 echo speed=5661
-pause
+pause >nul
 echo speed=6072
-pause
+pause >nul
 echo speed=6819
-pause
+pause >nul
 echo speed=7551
-pause
+pause >nul
 echo speed=8360
-pause
+pause >nul
 echo speed=8891
-pause
+pause >nul
 echo speed=9256
-pause
+pause >nul
 echo speed=9774
-pause
+pause >nul
 echo speed=10405
-pause
+pause >nul
 echo 10,000 mph reached. Commencing stage 3 seperation...
-pause
+pause >nul
 echo Stage 3 seperated. Weight has fallen from 192.4 to 131.6 tons.
-pause
+pause >nul
 echo speed=11471
-pause
+pause >nul
 echo speed=12842
-pause
+pause >nul
 echo speed=13921
-pause
+pause >nul
 echo speed=14612
-pause
+pause >nul
 echo speed=15881
-pause
+pause >nul
 echo speed=16440
-pause
+pause >nul
 echo speed=17929
-pause
+pause >nul
 echo speed=20203
-pause
+pause >nul
 echo speed=22158
-pause
+pause >nul
 echo speed=24200
-pause
+pause >nul
 echo 24,000 mph reached. Commencing stage 2 seperation...
-pause
+pause >nul
 echo Stage 2 seperation complete.
-pause
+pause >nul
 echo speed=27715
-pause
+pause >nul
 echo speed=30671
-pause
+pause >nul
 echo speed=33819
-pause
+pause >nul
 echo speed=36617
-pause
+pause >nul
 echo speed=39220
-pause
+pause >nul
 echo 39,000 mph reached. Coasting to circualization burn...
-pause
+pause >nul
 echo Altitude 160km.
-pause
+pause >nul
 echo Altitude 210km.
-pause
+pause >nul
 echo Altitude 260km.
-pause
+pause >nul
 echo Altitude 310km.
-pause
+pause >nul
 echo Altitude 360km.
-pause
+pause >nul
 echo Altitude 410km.
-pause
+pause >nul
 echo Altitude 450km. Burning for 2,000+-90 km orbit.
-pause.0
+pause >nul.0
 echo Burn percentage==%burnpercent%
-pause
+pause >nul
 echo burn percent = 4
-pause
+pause >nul
 echo burn percent = 11
-pause
+pause >nul
 echo burn percent = 16
-pause
+pause >nul
 echo burn percent = 22
-pause
+pause >nul
 echo burn percent = 25
-pause
+pause >nul
 echo burn percent = 31
-pause
+pause >nul
 echo burn percent = 35
-pause
+pause >nul
 echo burn percent = 40
-pause
+pause >nul
 echo burn percent = 48
-pause
+pause >nul
 echo burn percent = 55
-pause
+pause >nul
 echo burn percent = 61
-pause
+pause >nul
 echo burn percent = 67
-pause
+pause >nul
 echo burn percent = 75
-pause
+pause >nul
 echo burn percent = 82
-pause
+pause >nul
 echo burn percent = 90
-pause
+pause >nul
 echo burn percent = 96
-pause
+pause >nul
 echo burn percent = 100
-pause
+pause >nul
 echo Orbital burn done.
 echo You have earned 8 Money!
 set money=%money%+8
@@ -312,7 +313,7 @@ call earthorbit.bat
 call mars.bat
 :moneycheck
 echo %money%
-pause
+pause 
 goto :orbitmenu
 
 :phobosorbitmenu
@@ -330,65 +331,65 @@ echo %phobosmenu%==3 goto :crewrepphobos
 echo %phobosmenu%==4 goto :marsshot1
 :crewrepphobos
 echo It's so TINY!!!!!!!!!!!...and ripped apart.
-pause
+pause >nul
 goto :phobosorbitmenu
 :phoboseva
 echo Coming in v0.21.0 Dev Version
-pause
+pause >nul
 goto :phobosorbitmenu
 :marsshot1
 echo Coming in v0.21.0 Dev Version
-pause
+pause >nul
 goto :phobosorbitmenu
 :phobosland
 echo Coming in v0.21.0 Dev Version
-pause
+pause >nul
 goto :phobosorbitmenu
 :deimos2
 echo Coming in v0.21.0 Dev Version
-pause
+pause >nul
 goto :marsorbitmenu
 :marslanding
 echo Orbit 750+-190km
-pause
+pause >nul
 echo Orbit 550+-80km
-pause
+pause >nul
 echo Orbit 300+-200km.
-pause
+pause >nul
 echo No longer in orbit.
-pause
+pause >nul
 echo Altitude 290km.
-pause 
+pause >nul 
 echo Altitude 255km.
-pause 
+pause >nul 
 echo Altitude 210km.
-pause 
+pause >nul 
 echo Altitude 167km.
-pause 
+pause >nul 
 echo Altitude 120km.
-pause 
+pause >nul 
 echo Altitude 75km.
-pause 
+pause >nul 
 echo Altitude 30km.
-pause 
+pause >nul 
 echo Altitude 15km. Entering Mars atmosphere. strength=0.03% earth
-pause 
+pause >nul 
 echo Altitude 6km. Entering Mars atmosphere, strength=0.19% earth
-pause 
+pause >nul 
 echo Altitude 1km. Entering Mars atmosphere, strength=0.38% earth
-pause 
+pause >nul 
 echo Preparing for touchdown 47%, atmospheric strength 0.67% earth, altitude 800m.
-pause 
+pause >nul 
 echo Preparing for touchdown 92%, atmospheric strength 1.3% earth, altitude 200m.
-pause 
+pause >nul 
 echo Touchdown, rock height ~17m, atmo strength 1.9% earth.
-pause 
+pause >nul 
 echo Speed=70
-pause
+pause >nul
 echo Speed=30
-pause
+pause >nul
 echo Speed=12
-pause
+pause >nul
 goto :marssurfacemenu
 :marssurfacemenu
 cls
@@ -404,97 +405,97 @@ if %marssurface%==3 goto :surfacesample
 if %marssurface%==4 goto :crewrepmars
 :crewrepmars
 echo It's quite serene. Except you know this is a future ringed planet...so it spoils it.
-pause
+pause >nul
 goto :marssurfacemenu
 :surfacesample
 echo They are...quite...hard rocks.
-pause
+pause >nul
 goto :marssurfacemenu
 :earthshot2
 echo In 12,000km+-2,000km orbit
-pause
+pause >nul
 echo In 23,000km+-3,800km orbit
-pause
+pause >nul
 echo In 41,000km+-7,000km orbit
-pause
+pause >nul
 echo In 82,000km+-15,000km orbit.
-pause
+pause >nul
 echo In 167,000km+-28,000km orbit.
-pause
+pause >nul
 echo In 414,000km+-63,000km orbit.
-pause
+pause >nul
 echo In 1,121,450km+-112,000km orbit.
-pause
+pause >nul
 echo In 3,660,311km+-221,000km orbit.
-pause
+pause >nul
 echo In 14,139,770km+-410,000km orbit.
-pause
+pause >nul
 echo In 52,000,000km+-1,300,000km orbit.
-pause
+pause >nul
 echo Mars escape T-2 days.
-pause
+pause >nul
 echo Mars escape T-16 hours.
-pause
+pause >nul
 echo Mars escape T-5 hours.
-pause
+pause >nul
 echo Mars escape T-45 minutes.
-pause
+pause >nul
 echo Mars escape T-10 minutes.
-pause
+pause >nul
 echo Mars escape T-1 minute.
-pause
+pause >nul
 echo Mars escape-T-1 second.
-pause
+pause >nul
 echo Mars escaped.
-pause
+pause >nul
 echo Burning to Earth encounter...0%.
-pause
+pause >nul
 echo Burning to Earth encounter...17%.
-pause
+pause >nul
 echo Burning to Earth encounter...39%.
-pause
+pause >nul
 echo Burning to Earth encounter...56%.
-pause
+pause >nul
 echo Burning to Earth encounter...78%.
-pause
+pause >nul
 echo Burning to Earth encounter...92%.
-pause
+pause >nul
 echo Burning to Earth encounter...100%.
-pause
+pause >nul
 echo Earth encounter T-72 hours.
-pause
+pause >nul
 echo Earth encounter T-24 hours.
-pause
+pause >nul
 echo Earth encounter T-8 hours.
-pause
+pause >nul
 echo Earth encounter T-2 hours.
-pause
+pause >nul
 echo Earth encounter T-30 minutes.
-pause
+pause >nul
 echo Earth encounter T-1 minute.
-pause
+pause >nul
 echo Earth encounter 1 second.
-pause
+pause >nul
 echo Earth encountered.
-pause
+pause >nul
 echo Burning to Earth Orbit...1%.
-pause
+pause >nul
 echo Burning to Earth Orbit...12%.
-pause
+pause >nul
 echo Burning to Earth Orbit...29%.
-pause
+pause >nul
 echo Burning to Earth Orbit...42%.
-pause
+pause >nul
 echo Burning to Earth Orbit...61%.
-pause
+pause >nul
 echo Burning to Earth Orbit...78%.
-#pause
+#pause >nul
 echo Burning to Earth Orbit...92%.
-pause
+pause >nul
 echo Burning to Earth Orbit...100%.
-pause
+pause >nul
 echo Earth orbit reached.
-pause
+pause >nul
 goto :orbitmenu
 :marseva
 echo Where to go?
@@ -510,7 +511,7 @@ if %marsmenu%==4 goto :right1
 if %marsmenu%==5 goto :marsorbitalmenu
 :up1
 echo You can see your ship, floating in the blackness of space.
-pause
+pause >nul
 echo Where next?
 echo 1) Down
 echo 2) Back to da ship
@@ -523,7 +524,7 @@ if %marsmenu%==3 goto :left1
 if %marsmenu%==4 goto :right1
 :down1
 echo You can see your engine, being annoyed that it is somewhat out of service and only barely works.
-pause
+pause >nul
 echo Where next?
 echo 1) Down
 echo 2) Back to da ship
@@ -537,7 +538,7 @@ if %marsmenu%==4 goto :right1
 
 :left1
 echo You can see Mars, and Phobos.
-pause
+pause >nul
 echo Where next?
 echo 1) Down
 echo 2) Back to da ship
@@ -551,7 +552,7 @@ if %marsmenu%==4 goto :down1
 
 :down1
 echo You start to go down. You notice that you are getting close to Mars and hurry back to your ship.
-pause
+pause >nul
 echo Where next?
 echo 1) Down
 echo 2) Back to da ship
@@ -564,7 +565,7 @@ if %marsmenu%==3 goto :left1
 if %marsmenu%==4 goto :right1
 :crewreportma
 echo Wow, it's very...red. The planet looks so dead.
-pause
+pause >nul
 goto :marsorbitalmenu
 :help 
 echo Destinations: (use NO apostrophes, or capital letters, or spaces). Some of these may not be implemented or have not been unlocked.
@@ -617,7 +618,7 @@ echo Proxima Centuari (type proxcen)
 echo Alpha Centuari A (type alphacena)
 echo Alpha Centuari B (type alphacenb)
 echo Press any key to return to Mission Control
-pause >nul
+pause >nul >nul
 goto :MISSIONCONTROL
 :: shop goes here
 :shop
@@ -736,17 +737,17 @@ if %money% lss %cost% echo you do not have enough money && goto viewprices
 set /a money=money-item
 :show
 echo %money%
-pause
+pause >nul
 goto start
 :: ...and end here.
 :: other main menu option routines go here
 :instr
 echo Simple text adventure game with XP and stuff. Just upgrade.
-pause
+pause >nul
 goto :title
 :GitHub
 echo Github repo link: https://github.com/DarkKnight64/Dysnomia
-pause
+pause >nul
 goto :title
 :gupdate
 echo Updating Dysnomia...
