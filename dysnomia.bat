@@ -34,6 +34,7 @@
 :: v0.20.1 - Typo corrections...
 :: v0.21.0 - The Great Batch File Seperation 
 :: v0.21.5 - Replaced "pause" with "pause >nul" in most instances
+:: v0.5/v0.50.0 ReWrite - 45 commits so far as of 15:39 21/12/2016, barely completed.
 :GAMEVAR
 set /a money=20000000
 set speed=0
@@ -72,24 +73,25 @@ open dysnomia.bat
 open dysnomianext.bat
 :: game routines start here...
 :gamebegin
-echo The day is July 22, 1969. Humanity has gone to the Moon and Apollo 11 is on it's second day. 
-pause 
-echo America, Europe, and the Soviets are planning Moon missions.
+echo Welcome to Dysnomia!
+echo Dysnomia v0.5.49 alpha.
 pause 
 goto :MISSIONCONTROL
 :MISSIONCONTROL
 cls
 echo Welcome to Mission Control! What do you want to do?
 call date.bat
-echo 1) Choose a destination
+echo 1) Launch from Earth
 echo 2) Go to the shop
 echo 3) Go back to the main menu
 echo 4) View destinations
 set /p missionchoice=
-if %missionchoice%==1 goto :destinchoice
+if %missionchoice%==1 goto :earthlaunch
 if %missionchoice%==2 goto :shop
 if %missionchoice%==3 goto :Title
 if %missionchoice%==4 goto :help
+:earthlaunch
+goto earth
 :destinchoice
 echo Choose a destination. (type help for destinations)
 set /p destinations=
@@ -144,158 +146,128 @@ if %destinations%==alphacenb goto :alphacenb
 if %destinations%==help goto :help
 :: Earth launch, orbital menu, landing...etc start here.
 :earth 
-echo Launching...
-pause >nul
-echo 10...
-pause >nul
-echo 9...
-pause >nul
-echo 8...
-pause >nul
-echo 7...
-pause >nul
-echo 6...
-pause >nul
-echo 5...
-pause >nul 
-echo 4...
-pause >nul
-echo 3...
-pause >nul
-echo 2...
-pause >nul
-echo 1...
-pause >nul
-echo 0...
-pause >nul
-echo And liftoff!
-pause >nul
-echo speed=1119
-pause >nul
-echo speed=1572
-pause >nul
-echo speed=2026
-pause >nul
-echo speed=2661
-pause >nul
-echo speed=3227
-pause >nul
-echo speed=4083
-pause >nul
-echo speed=4882
-pause >nul
-echo speed=5661
-pause >nul
-echo speed=6072
-pause >nul
-echo speed=6819
-pause >nul
-echo speed=7551
-pause >nul
-echo speed=8360
-pause >nul
-echo speed=8891
-pause >nul
-echo speed=9256
-pause >nul
-echo speed=9774
-pause >nul
-echo speed=10405
-pause >nul
-echo 10,000 mph reached. Commencing stage 3 seperation...
-pause >nul
-echo Stage 3 seperated. Weight has fallen from 192.4 to 131.6 tons.
-pause >nul
-echo speed=11471
-pause >nul
-echo speed=12842
-pause >nul
-echo speed=13921
-pause >nul
-echo speed=14612
-pause >nul
-echo speed=15881
-pause >nul
-echo speed=16440
-pause >nul
-echo speed=17929
-pause >nul
-echo speed=20203
-pause >nul
-echo speed=22158
-pause >nul
-echo speed=24200
-pause >nul
-echo 24,000 mph reached. Commencing stage 2 seperation...
-pause >nul
-echo Stage 2 seperation complete.
-pause >nul
-echo speed=27715
-pause >nul
-echo speed=30671
-pause >nul
-echo speed=33819
-pause >nul
-echo speed=36617
-pause >nul
-echo speed=39220
-pause >nul
-echo 39,000 mph reached. Coasting to circualization burn...
-pause >nul
-echo Altitude 160km.
-pause >nul
-echo Altitude 210km.
-pause >nul
-echo Altitude 260km.
-pause >nul
-echo Altitude 310km.
-pause >nul
-echo Altitude 360km.
-pause >nul
-echo Altitude 410km.
-pause >nul
-echo Altitude 450km. Burning for 2,000+-90 km orbit.
-pause >nul.0
-echo Burn percentage==%burnpercent%
-pause >nul
-echo burn percent = 4
-pause >nul
-echo burn percent = 11
-pause >nul
-echo burn percent = 16
-pause >nul
-echo burn percent = 22
-pause >nul
-echo burn percent = 25
-pause >nul
-echo burn percent = 31
-pause >nul
-echo burn percent = 35
-pause >nul
-echo burn percent = 40
-pause >nul
-echo burn percent = 48
-pause >nul
-echo burn percent = 55
-pause >nul
-echo burn percent = 61
-pause >nul
-echo burn percent = 67
-pause >nul
-echo burn percent = 75
-pause >nul
-echo burn percent = 82
-pause >nul
-echo burn percent = 90
-pause >nul
-echo burn percent = 96
-pause >nul
-echo burn percent = 100
-pause >nul
-echo Orbital burn done.
-echo You have earned 8 Money!
-set money=%money%+8
-call earthorbit.bat
+echo Taking Off...
+pause >nul
+echo 10
+pause >nul
+echo 9
+pause >nul
+echo 8
+pause >nu
+echo 7
+pause >nul
+echo 6
+pause >nul
+echo 5
+pause >nul
+echo 4
+pause >nul
+echo 3
+pause >nul
+echo 2
+pause >nul
+echo 1
+pause >nul
+echo Takeoff!
+cls
+set speed=567
+echo %speed%
+cls
+set speed=1028
+echo %speed%
+cls
+set speed=1675
+echo %speed%
+cls
+set speed=2323
+echo %speed%
+cls
+set speed=2978
+echo %speed%
+cls
+set speed=3534
+echo %speed%
+cls
+set speed=4156
+echo %speed%
+cls
+set speed=4692
+echo %speed%
+cls
+set speed=5674
+echo %speed%
+cls
+set speed=6228
+echo %speed%
+cls
+set speed=6943
+echo %speed%
+cls
+set speed=7676
+echo %speed%
+cls
+set speed=8449
+echo %speed%
+cls
+set speed=9136
+echo %speed%
+cls
+set speed=9823
+echo %speed%
+cls
+set speed=10666
+echo %speed%
+cls
+set speed=11470
+echo %speed%
+cls
+set speed=12184
+echo %speed%
+echo First Stage Seperation
+timeout /t 2 >nul
+cls
+set speed=13832
+echo %speed%
+timeout /t 2 >nul
+cls
+set speed=15116
+echo %speed%
+cls
+set speed=16725
+echo %speed%
+cls
+set speed=18296
+cls
+set speed=20105
+echo %speed%
+cls
+set speed=21974
+echo %speed%
+cls
+set speed=23823
+cls
+set speed=26724
+echo %speed%
+cls
+echo Second Stage Seperation
+timeout /t 2 >nul
+cls
+set speed=30300
+echo %speed%
+cls
+set speed=34831
+echo %speed%
+cls
+set speed=38792
+echo %speed%
+cls
+echo Performing orbital burn...
+timeout /t 7 >nul
+goto :explore
+:explore
+echo Current Coords: %x% %y% 1 x = 1 million km up/down, 1 y = 1 million km left/right.
+echo Not Done
+pause
 :mars
 call mars.bat
 :moneycheck
