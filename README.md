@@ -10,3 +10,5 @@ The master branch is the stable version, a la v0.1.2 or the most recent pre-pull
 The dev branch is the most recent commit.
 #### To update the game, you must run as command prompt administrator, or download from here:
 https://github.com/DarkKnight64/Dysnomia/archive/master.zip
+
+### THIS GAME IS BEING REWRITTEN IN A SEPERATE BRANCH
