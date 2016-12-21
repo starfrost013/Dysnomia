@@ -1,4 +1,4 @@
-:: PlanetID format version 0.2
+:: PlanetID format version 0.6
 :: this is the new Planet ID system for Dysnomia, which will go in hand with the new coordinate system.
 :: numbers are:
 :: first number: star it is orbiting around's StarID
@@ -82,3 +82,7 @@ set Albedo=0.38
 :: albedo
 set EnviromentType=grassy
 (grassy, earth, hell, icy, water-icy, gassy, etc)
+set RocheLimit=2000
+:: planets have roche limits too!
+set HillSphere=300000
+:: maxmoon
