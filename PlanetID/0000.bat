@@ -50,6 +50,6 @@ set LifeIntel=-1 :: VERY IMPORTANT!! sets what happens when you try to land
 :: will change with date up+down.
 :: note how the PlanetID format is alpha [v0.1] and could change at any moment.
 set IsMoon=false :: If it is a moon
-set OrbitingBody=0000 :: orbiting body's StarID. Orbits Test Star.
+set OrbitingBody=0000 :: orbiting bodys StarID. Orbits Test Star.
 set MoonOrbitingBody=none :: if it is a moon the planet it is orbiting. none = not a moon.
 set MoonOrbitalRadius=none :: orbital radius if moon. none if not.
