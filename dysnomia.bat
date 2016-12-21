@@ -1,4 +1,4 @@
-:: Dysnomia v0.50.0 / v0.5 - 0.5.52 16:11 21/12/2016
+:: Dysnomia v0.50.0 / v0.5 - 0.5.52 16:28 21/12/2016
 :: Welcome.
 :: Forks? Just Do It.
 :: Write to dysnomialog.txt
@@ -40,6 +40,8 @@ set /a money=20000000
 set speed=0
 set burnpercent=0
 set gameversion=0.5
+set x=0
+set y=0
 @ECHO OFF
 title Dysnomia [v0.5]
 :: title and secret routines go here.
