@@ -1,5 +1,5 @@
 :n
-set year=1990
+set /a year=1990
 echo                                                                                                            %year%
 timeout /t 24 >nul
 set year=%year%+1
