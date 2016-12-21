@@ -15,6 +15,8 @@ set Luminosity=0.14 :: msol
 set StarLifeStage=main :: life stage. gas, proto, main, red giant, white dwarf, black dwarf.
 set Habitable=0.09 :: Sets habitable lifespan
 set Age=50 :: star age
+set IsBinary=false :: is binary
+set BinaryOrbitalDistance=none :: binary orbital distance.
 :: StarID and PlanetID notes
 :: at the moment they are .bat, but they may become .dysnomiaid files.
-:: StarID Format v0.5
+:: StarID Format v0.6
