@@ -40,8 +40,8 @@ set /a money=20000000
 set speed=0
 set burnpercent=0
 set gameversion=0.5
-set x=0
-set y=0
+set /a x=0
+set /a y=0
 @ECHO OFF
 title Dysnomia [v0.5]
 :: title and secret routines go here.
@@ -267,7 +267,8 @@ echo Performing orbital burn...
 timeout /t 7 >nul
 goto :explore
 :explore
-echo Current Coords: %x% %y% 1 x = 1 million km up/down, 1 y = 1 million km left/right.
+cls
+echo Current Coords: %x% %y% (1 x = 1 million km up/down, 1 y = 1 million km left/right.)
 echo 1) Move up/down
 echo 2) Move left/right
 set /p explorechoice=
@@ -281,7 +282,7 @@ set %x%=%x%+1
 set %x%=%x%+1
 set %x%=%x%+1
 pause
-goto main
+goto explore
 :mars
 call mars.bat
 :moneycheck
@@ -289,260 +290,8 @@ echo %money%
 pause 
 goto :orbitmenu
 
-:phobosorbitmenu
-cls
-echo You are currently orbiting Phobos.
-echo Choose an option.
-echo 1) Land
-echo 2) Go EVA
-echo 3) Crew Report
-echo 4) Return to Mars
-set /p phobosmenu=
-echo %phobosmenu%==1 goto :phobosland
-echo %phobosmenu%==2 goto :phoboseva
-echo %phobosmenu%==3 goto :crewrepphobos
-echo %phobosmenu%==4 goto :marsshot1
-:crewrepphobos
-echo It's so TINY!!!!!!!!!!!...and ripped apart.
-pause >nul
-goto :phobosorbitmenu
-:phoboseva
-echo Coming in v0.21.0 Dev Version
-pause >nul
-goto :phobosorbitmenu
-:marsshot1
-echo Coming in v0.21.0 Dev Version
-pause >nul
-goto :phobosorbitmenu
-:phobosland
-echo Coming in v0.21.0 Dev Version
-pause >nul
-goto :phobosorbitmenu
-:deimos2
-echo Coming in v0.21.0 Dev Version
-pause >nul
-goto :marsorbitmenu
-:marslanding
-echo Orbit 750+-190km
-pause >nul
-echo Orbit 550+-80km
-pause >nul
-echo Orbit 300+-200km.
-pause >nul
-echo No longer in orbit.
-pause >nul
-echo Altitude 290km.
-pause >nul 
-echo Altitude 255km.
-pause >nul 
-echo Altitude 210km.
-pause >nul 
-echo Altitude 167km.
-pause >nul 
-echo Altitude 120km.
-pause >nul 
-echo Altitude 75km.
-pause >nul 
-echo Altitude 30km.
-pause >nul 
-echo Altitude 15km. Entering Mars atmosphere. strength=0.03% earth
-pause >nul 
-echo Altitude 6km. Entering Mars atmosphere, strength=0.19% earth
-pause >nul 
-echo Altitude 1km. Entering Mars atmosphere, strength=0.38% earth
-pause >nul 
-echo Preparing for touchdown 47%, atmospheric strength 0.67% earth, altitude 800m.
-pause >nul 
-echo Preparing for touchdown 92%, atmospheric strength 1.3% earth, altitude 200m.
-pause >nul 
-echo Touchdown, rock height ~17m, atmo strength 1.9% earth.
-pause >nul 
-echo Speed=70
-pause >nul
-echo Speed=30
-pause >nul
-echo Speed=12
-pause >nul
-goto :marssurfacemenu
-:marssurfacemenu
-cls
-echo You have landed on Mars. What do you do?
-echo 1) Go back to orbit.
-echo 2) Go EVA
-echo 3) Surface sample
-echo 4) Go on crew report.
-set /p marssurface=
-if %marssurface%==1 goto :orbitshot1
-if %marssurface%==2 goto :marssurfaceeva
-if %marssurface%==3 goto :surfacesample
-if %marssurface%==4 goto :crewrepmars
-:crewrepmars
-echo It's quite serene. Except you know this is a future ringed planet...so it spoils it.
-pause >nul
-goto :marssurfacemenu
-:surfacesample
-echo They are...quite...hard rocks.
-pause >nul
-goto :marssurfacemenu
-:earthshot2
-echo In 12,000km+-2,000km orbit
-pause >nul
-echo In 23,000km+-3,800km orbit
-pause >nul
-echo In 41,000km+-7,000km orbit
-pause >nul
-echo In 82,000km+-15,000km orbit.
-pause >nul
-echo In 167,000km+-28,000km orbit.
-pause >nul
-echo In 414,000km+-63,000km orbit.
-pause >nul
-echo In 1,121,450km+-112,000km orbit.
-pause >nul
-echo In 3,660,311km+-221,000km orbit.
-pause >nul
-echo In 14,139,770km+-410,000km orbit.
-pause >nul
-echo In 52,000,000km+-1,300,000km orbit.
-pause >nul
-echo Mars escape T-2 days.
-pause >nul
-echo Mars escape T-16 hours.
-pause >nul
-echo Mars escape T-5 hours.
-pause >nul
-echo Mars escape T-45 minutes.
-pause >nul
-echo Mars escape T-10 minutes.
-pause >nul
-echo Mars escape T-1 minute.
-pause >nul
-echo Mars escape-T-1 second.
-pause >nul
-echo Mars escaped.
-pause >nul
-echo Burning to Earth encounter...0%.
-pause >nul
-echo Burning to Earth encounter...17%.
-pause >nul
-echo Burning to Earth encounter...39%.
-pause >nul
-echo Burning to Earth encounter...56%.
-pause >nul
-echo Burning to Earth encounter...78%.
-pause >nul
-echo Burning to Earth encounter...92%.
-pause >nul
-echo Burning to Earth encounter...100%.
-pause >nul
-echo Earth encounter T-72 hours.
-pause >nul
-echo Earth encounter T-24 hours.
-pause >nul
-echo Earth encounter T-8 hours.
-pause >nul
-echo Earth encounter T-2 hours.
-pause >nul
-echo Earth encounter T-30 minutes.
-pause >nul
-echo Earth encounter T-1 minute.
-pause >nul
-echo Earth encounter 1 second.
-pause >nul
-echo Earth encountered.
-pause >nul
-echo Burning to Earth Orbit...1%.
-pause >nul
-echo Burning to Earth Orbit...12%.
-pause >nul
-echo Burning to Earth Orbit...29%.
-pause >nul
-echo Burning to Earth Orbit...42%.
-pause >nul
-echo Burning to Earth Orbit...61%.
-pause >nul
-echo Burning to Earth Orbit...78%.
-#pause >nul
-echo Burning to Earth Orbit...92%.
-pause >nul
-echo Burning to Earth Orbit...100%.
-pause >nul
-echo Earth orbit reached.
-pause >nul
-goto :orbitmenu
-:marseva
-echo Where to go?
-echo 1) Up
-echo 2) Down
-echo 3) Left
-echo 4) Right
-echo 5) Back to da ship
-if %marsmenu%==1 goto :up1
-if %marsmenu%==2 goto :down1
-if %marsmenu%==3 goto :left1
-if %marsmenu%==4 goto :right1
-if %marsmenu%==5 goto :marsorbitalmenu
-:up1
-echo You can see your ship, floating in the blackness of space.
-pause >nul
-echo Where next?
-echo 1) Down
-echo 2) Back to da ship
-echo 3) Left
-echo 4) Right
-set /p marsevamenu=
-if %marsmenu%==1 goto :down1
-if %marsmenu%==2 goto :marsorbitalmenu
-if %marsmenu%==3 goto :left1
-if %marsmenu%==4 goto :right1
-:down1
-echo You can see your engine, being annoyed that it is somewhat out of service and only barely works.
-pause >nul
-echo Where next?
-echo 1) Down
-echo 2) Back to da ship
-echo 3) Left
-echo 4) Right
-set /p marsevamenu=
-if %marsmenu%==1 goto :down1
-if %marsmenu%==2 goto :marsorbitalmenu
-if %marsmenu%==3 goto :left1
-if %marsmenu%==4 goto :right1
-
-:left1
-echo You can see Mars, and Phobos.
-pause >nul
-echo Where next?
-echo 1) Down
-echo 2) Back to da ship
-echo 3) Left
-echo 4) Right
-set /p marsevamenu=
-if %marsmenu%==1 goto :right1
-if %marsmenu%==2 goto :marsorbitalmenu
-if %marsmenu%==3 goto :left1
-if %marsmenu%==4 goto :down1
-
-:down1
-echo You start to go down. You notice that you are getting close to Mars and hurry back to your ship.
-pause >nul
-echo Where next?
-echo 1) Down
-echo 2) Back to da ship
-echo 3) Left
-echo 4) Right
-set /p marsevamenu=
-if %marsmenu%==1 goto :down1
-if %marsmenu%==2 goto :marsorbitalmenu
-if %marsmenu%==3 goto :left1
-if %marsmenu%==4 goto :right1
-:crewreportma
-echo Wow, it's very...red. The planet looks so dead.
-pause >nul
-goto :marsorbitalmenu
-:help 
-echo Destinations: (use NO apostrophes, or capital letters, or spaces). Some of these may not be implemented or have not been unlocked.
-echo Sun
+:unused1
+echo Destinations:
 echo Mercury
 echo Venus
 echo Earth
