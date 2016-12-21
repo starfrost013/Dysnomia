@@ -1,7 +1,9 @@
 :: this is the new Planet ID system for Dysnomia, which will go in hand with the new coordinate system.
 :: numbers are:
 :: first number: star it is orbiting around's StarID
-:: second: 
+:: second: planet #
+:: third: moon #
+:: fourth: If it is an asteroid, the asteroid #
 set PlanetName=Test :: planet name
 set PlanetSizeKM=1000 :: planet size (KM)
 set PlanetGravity=0.5263 :: might do something with might not
