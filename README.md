@@ -1,15 +1,18 @@
-# Dysnomia
-A batch game in which you have to research technology to reach new planets.
-### Current Version: 0.1.3.5, or v0.21.5 Development Version, change branches to "dev"
-### You are currently in the Dev branch.
-### Info
-My first game, which was started on 18 May 2016 and is currently in active development. You can help as well by emailing: mario64crashed@gmail.com, or just start a pull request and I'll merge you over.
+# Dysnomia v0.5 - Rewrite
 
-### Branch Information
-The master branch is the stable version, a la v0.1.2 or the most recent pre-pull (v0.1.3.5)
-The dev branch is the most recent commit.
-#### To update the game, you must download from here:
-https://github.com/DarkKnight64/Dysnomia/archive/master.zip
 
-### The update feature is broken and may be fixed in v0.22.0.
+## A rewrite of Dysnomia with better code.
 
+A complete rewrite of Dysnomia, a batch game worked on from May to October 2016. It is still in batch at the moment, but may be rewritten in VB at some point. The game is about researching technology to reach new planets.
+
+### Goals
+
+1. Clean up Dysnomia code.
+2. Add more features.
+3. Look cleaner.
+4. Working shop.
+5. Everything else lol.
+
+### Completeness
+
+The project is not complete.
