@@ -15,6 +15,6 @@ set %day%=1
 set %month%=1
 set %year%=1990
 echo Writing Log...
-call writelog.bat
+call logwrite.bat
 echo Done!
 call dysnomia.bat
