@@ -76,7 +76,7 @@ open dysnomianext.bat
 :: game routines start here...
 :gamebegin
 echo Welcome to Dysnomia!
-echo Dysnomia v0.5.49 alpha.
+echo Dysnomia v0.5.56 alpha.
 pause 
 goto :MISSIONCONTROL
 :MISSIONCONTROL
@@ -155,7 +155,7 @@ pause >nul
 echo 9
 pause >nul
 echo 8
-pause >nu
+pause >nul
 echo 7
 pause >nul
 echo 6
@@ -269,18 +269,37 @@ goto :explore
 :explore
 cls
 echo Current Coords: %x% %y% (1 x = 1 million km up/down, 1 y = 1 million km left/right.)
-echo 1) Move up/down
-echo 2) Move left/right
+echo 1) Move up
+echo 2) Move down
+echo 3) Move left
+echo 4) Move right
 set /p explorechoice=
 if %explorechoice%==1 goto :x
-if %explorechoice%==2 goto :y
+if %explorechoice%==2 goto :x2
+if %explorechoice%==3 goto :y
+if %explorechoice%==4 goto :y2
 :y
-echo going right 5 million km...
-set %x%=%x%+1
-set %x%=%x%+1
-set %x%=%x%+1
-set %x%=%x%+1
-set %x%=%x%+1
+echo How many mKM (1 million KM = 1 mKM)?
+set /p mnx2=
+for %%A IN (%mnx2%) DO set %x%=%x%-1
+pause
+goto explore
+:y2
+echo How many mKM (1 million KM = 1 mKM)?
+set /p mnx2=
+for %%A IN (%mnx2%) DO set %x%=%x%+1
+:x
+echo How many mKM (1 million KM = 1 mKM)?
+set /p mnx2=
+for %%A IN (%mnx2%) DO set %y%=%y%+1
+:y
+echo How many mKM (1 million KM = 1 mKM)?
+set /p mnx2=
+for %%A IN (%mnx2%) DO set %x%=%x%-1
+pause
+goto explore
+pause
+goto explore
 pause
 goto explore
 :mars
