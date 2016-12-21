@@ -1,4 +1,4 @@
-DATE=1990-01-01
+DATE=01-01-1990
 
 for i in {0..2147483647}
 timeout /t 1 >nul
