@@ -33,18 +33,19 @@
 :: v0.20.0 - Added Mars stuff
 :: v0.20.1 - Typo corrections...
 :: v0.21.0 - The Great Batch File Seperation 
-:: v0.21.5 - Replaced "pause >nul" with "pause >nul >nul"
+:: v0.21.5 - Replaced "pause" with "pause >nul" in most instances
 :GAMEVAR
 set /a money=20000000
-set /a speed=0
-set /a burnpercent=0
+set speed=0
+set burnpercent=0
+set gameversion=0.5
 @ECHO OFF
-title Dysnomia [v0.21.1 Development Version]
-:LOGWRITE
-echo Dysnomia 
+title Dysnomia [v0.5]
+:logwrite
+echo Dysnomia
 echo Log Date: %date%
 echo Log Time: %date%
-echo Game Version=v0.21.1 > dysnomialog.txt
+echo Game Version=%gameversion% > dysnomialog.txt
 echo Windows Version=%OS%>> dysnomialog.txt
 echo Computer Name=%COMPUTERNAME%>> dysnomialog.txt
 echo Win Root=%SystemRoot%>> dysnomialog.txt
@@ -52,13 +53,12 @@ echo Processor Information:>> dysnomialog.txt
 echo Architecture=%PROCESSOR_ARCHITECTURE%>> dysnomialog.txt
 echo Identifier=%PROCESSOR_IDENTIFIER%>> dysnomialog.txt
 echo Level=%PROCESSOR_LEVEL%>> dysnomialog.txt
-echo Revsion=%PROCESSOR_REVISION%>> dysnomialog.txt
+echo Revision=%PROCESSOR_REVISION%>> dysnomialog.txt
 echo Cores=%NUMBER_OF_PROCESSORS%>> dysnomialog.txt
 :: title and secret routines go here.
 goto :Title
 :Secret
 echo project started 14:35 18/05/2016, current date %DATE%!
-echo Version 0.21.0 started at 00:36 08/28/2016, current date %DATE%!
 echo Virus.%DATE%.%TIME%.Severity%RANDOM%.%RANDOM%
 pause >nul
 goto :Title
@@ -93,7 +93,7 @@ pause
 goto :MISSIONCONTROL
 :MISSIONCONTROL
 cls
-echo Welcome to Mission Control. What do you want to do?
+echo Welcome to Mission Control! What do you want to do?
 echo 1) Choose a destination
 echo 2) Go to the shop
 echo 3) Go back to the main menu
