@@ -1,4 +1,4 @@
-:: Dysnomia v0.0.04 - 18/05/2016 15:03
+:: Dysnomia v0.50.0 / v0.5 - 0.5.52 16:11 21/12/2016
 :: Welcome.
 :: Forks? Just Do It.
 :: Write to dysnomialog.txt
@@ -266,7 +266,18 @@ timeout /t 7 >nul
 goto :explore
 :explore
 echo Current Coords: %x% %y% 1 x = 1 million km up/down, 1 y = 1 million km left/right.
-echo Not Done
+echo 1) Move up/down
+echo 2) Move left/right
+set /p explorechoice=
+if %explorechoice%==1 goto :x
+if %explorechoice%==2 goto :y
+:x
+echo going right 5 million km...
+set %x%=%x%+1
+set %x%=%x%+1
+set %x%=%x%+1
+set %x%=%x%+1
+set %x%=%x%+1
 pause
 :mars
 call mars.bat
