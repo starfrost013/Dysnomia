@@ -57,7 +57,7 @@ set LifeIntel=-1
 :: 25: Interstellar (TNG)
 :: 26: Intergalatic
 :: will change with date up+down.
-:: note how the PlanetID format is alpha [v0.1] and could change at any moment.
+:: note how the PlanetID format is beta [v0.5] and could change at any moment.
 set IsMoon=false 
 :: If it is a moon
 set OrbitingBody=0000 
@@ -66,3 +66,19 @@ set MoonOrbitingBody=none
 :: if it is a moon the planet it is orbiting. none = not a moon.
 set MoonOrbitalRadius=none 
 :: orbital radius if moon. none if not.
+set Class=
+:: class (dust, asteroid, dwarf planet, small planet, planet, earthlike planet, super-Earth, ice giant, gas giant, super-Jupiter)
+set Rings=false
+:: rings
+set RingSize=false
+:: ring size KM. false if none
+set RingType=false
+:: ring type. (tenous, large) false if none
+set RingWidth=false
+:: ring width KM false if none
+set RingMass=false
+:: ring mass KG false if none
+set Albedo=0.38
+:: albedo
+set EnviromentType=grassy
+(grassy, earth, hell, icy, water-icy, gassy, etc)
