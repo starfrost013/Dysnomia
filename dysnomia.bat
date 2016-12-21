@@ -80,6 +80,7 @@ goto :MISSIONCONTROL
 :MISSIONCONTROL
 cls
 echo Welcome to Mission Control! What do you want to do?
+call date.bat
 echo 1) Choose a destination
 echo 2) Go to the shop
 echo 3) Go back to the main menu
