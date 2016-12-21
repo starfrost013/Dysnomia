@@ -5,16 +5,25 @@
 :: second: planet #
 :: third: moon #
 :: fourth: If it is an asteroid, the asteroid #
-set PlanetName=Test :: planet name
-set PlanetSizeKM=1000 :: planet size (KM)
-set PlanetGravity=0.5263 :: might do something with might not
-set PlanetAtmo=false :: no atmo, true OR false
-set PlanetLife=false :: no life, true OR false. If true, things happen when you try to land.
+set PlanetName=Test 
+:: planet name
+set PlanetSizeKM=1000 
+:: planet size (KM)
+set PlanetGravity=0.5263 
+:: might do something with might not
+set PlanetAtmo=false 
+:: no atmo, true OR false
+set PlanetLife=false 
+:: no life, true OR false. If true, things happen when you try to land.
 set PlanetOrbitalRadius=1500000 :: Distance from star to planet
-set PlanetStar=1 :: for use by StarID?
-set PlanetNumber=1 :: closest planet
-set Visited=false :: If it has been visited by a ship before.
-set LifeIntel=-1 :: VERY IMPORTANT!! sets what happens when you try to land
+set PlanetStar=1 
+:: for use by StarID?
+set PlanetNumber=1 
+:: closest planet
+set Visited=false 
+:: If it has been visited by a ship before.
+set LifeIntel=-1 
+:: VERY IMPORTANT!! sets what happens when you try to land
 :: if LifeIntel is less than 7, you can land.
 :: if LifeIntel is between 7 and 13, you can land but your ship may get damaged.
 :: if LifeIntel is >14, you can't.
@@ -49,7 +58,11 @@ set LifeIntel=-1 :: VERY IMPORTANT!! sets what happens when you try to land
 :: 26: Intergalatic
 :: will change with date up+down.
 :: note how the PlanetID format is alpha [v0.1] and could change at any moment.
-set IsMoon=false :: If it is a moon
-set OrbitingBody=0000 :: orbiting bodys StarID. Orbits Test Star.
-set MoonOrbitingBody=none :: if it is a moon the planet it is orbiting. none = not a moon.
-set MoonOrbitalRadius=none :: orbital radius if moon. none if not.
+set IsMoon=false 
+:: If it is a moon
+set OrbitingBody=0000 
+:: orbiting bodys StarID. Orbits Test Star.
+set MoonOrbitingBody=none 
+:: if it is a moon the planet it is orbiting. none = not a moon.
+set MoonOrbitalRadius=none 
+:: orbital radius if moon. none if not.
