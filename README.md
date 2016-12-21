@@ -11,5 +11,5 @@ The dev branch is the most recent commit.
 #### To update the game, you must download from here:
 https://github.com/DarkKnight64/Dysnomia/archive/master.zip
 
-### The update feature is broken and may be fixed in v0.22.0.
+### THIS GAME IS BEING REWRITTEN IN A SEPREATE BRANCH.
 
