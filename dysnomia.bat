@@ -273,7 +273,7 @@ echo 2) Move left/right
 set /p explorechoice=
 if %explorechoice%==1 goto :x
 if %explorechoice%==2 goto :y
-:x
+:y
 echo going right 5 million km...
 set %x%=%x%+1
 set %x%=%x%+1
@@ -281,6 +281,7 @@ set %x%=%x%+1
 set %x%=%x%+1
 set %x%=%x%+1
 pause
+goto main
 :mars
 call mars.bat
 :moneycheck
