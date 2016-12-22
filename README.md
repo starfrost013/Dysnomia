@@ -15,4 +15,24 @@ A complete rewrite of Dysnomia, a batch game worked on from May to October 2016.
 
 ### Completeness
 
-The project is not complete.
+#### ---COMPLETE---
+- New main menu 
+- Options Menu
+- Map moving
+- X and Y coords
+- PlanetID v0.6
+- StarID v0.6
+- init.bat
+
+#### ---INCOMPLETE---
+- Planet encounters
+- PlanetID 1.0
+- StarID 1.0
+- Planet/star implementation
+- Universe
+- Planet and star creator
+- Death distance
+- Ships
+- A lot of other stuff. 
+
+
