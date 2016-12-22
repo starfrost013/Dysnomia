@@ -5,18 +5,18 @@
 :: second: planet #
 :: third: moon #
 :: fourth: If it is an asteroid, the asteroid #
-set PlanetName=Test 
+set PlanetName=Mercury  
 :: planet name
-set PlanetSizeKM=1000 
+set PlanetSizeKM=2440
 :: planet size (KM)
-set PlanetGravity=0.5263 
-:: might do something with might not
+set PlanetGravity=0.36
+:: might do something with might not, Gs.
 set PlanetAtmo=false 
 :: no atmo, true OR false
 set PlanetLife=false 
 :: no life, true OR false. If true, things happen when you try to land.
-set PlanetOrbitalRadius=1500000 :: Distance from star to planet
-set PlanetStar=1 
+set PlanetOrbitalRadius=57909050 :: Distance from star to planet
+set PlanetStar=1
 :: for use by StarID?
 set PlanetNumber=1 
 :: closest planet
@@ -57,16 +57,16 @@ set LifeIntel=-1
 :: 25: Interstellar (TNG)
 :: 26: Intergalatic
 :: will change with date up+down.
-:: note how the PlanetID format is beta [v0.5] and could change at any moment.
+:: note how the PlanetID format is beta [v0.6] and could change at any moment.
 set IsMoon=false 
 :: If it is a moon
-set OrbitingBody=0000 
+set OrbitingBody=1000 
 :: orbiting bodys StarID. Orbits Test Star.
 set MoonOrbitingBody=none 
 :: if it is a moon the planet it is orbiting. none = not a moon.
 set MoonOrbitalRadius=none 
 :: orbital radius if moon. none if not.
-set Class=
+set Class=smallplanet
 :: class (dust, asteroid, dwarf planet, small planet, planet, earthlike planet, super-Earth, ice giant, gas giant, super-Jupiter)
 set Rings=false
 :: rings
@@ -80,9 +80,9 @@ set RingMass=false
 :: ring mass KG false if none
 set Albedo=0.38
 :: albedo
-set EnviromentType=grassy
+set EnviromentType=barren
 (grassy, earth, hell, icy, water-icy, gassy, etc)
-set RocheLimit=2000
+set RocheLimit=8000
 :: planets have roche limits too!
-set HillSphere=300000
+set HillSphere=76500
 :: maxmoon
