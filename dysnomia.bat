@@ -34,7 +34,9 @@
 :: v0.20.1 - Typo corrections...
 :: v0.21.0 - The Great Batch File Seperation 
 :: v0.21.5 - Replaced "pause" with "pause >nul" in most instances
-:: v0.5/v0.50.0 ReWrite - 45 commits so far as of 15:39 21/12/2016, barely completed.
+:: v0.5/v0.50.0 ReWrite - 64 commits so far as of 14:46 22/12/2016, incomplet.
+color 1f
+:: set color to spacey one
 :GAMEVAR
 set /a money=20000000
 set speed=0
@@ -53,20 +55,39 @@ pause >nul
 goto :Title
 :Title
 cls
-echo {Dysnomia}
+echo //Dysnomia//
 echo 1: Start
 echo 2: Instructions
 echo 3: GitHub
 echo 4: Game Update
-echo 5: exit
+echo 5: Options
+echo 6: exit
 set /p Gamedate=
 if %Gamedate%==1 goto :gamebegin
 if %Gamedate%==2 goto :instr
 if %Gamedate%==3 goto :GitHub
 if %Gamedate%==4 goto :gupdate
-if %Gamedate%==5 exit
+if %Gamedate%==5 goto :options
+if %Gamedate%==6 goto :exit
 if %Gamedate%==anon goto :anon
-if %Ganedate%==461523 goto :Secret
+if %Gamedate%==461523 goto :Secret
+:options
+cls
+echo Dysnomia Options:
+echo.
+echo.
+echo Window Color: 1) Dark blue on white 2) Cyan on white 3) Purple on white 4) Black on white 5) White on dark blue
+set /p option=
+if %option%==1 color 1f
+if %option%==2 color 37
+if %option%==3 color 57
+if %option%==4 color 07
+if %option%==5 color 79
+goto menu
+:gupdate
+echo Feature not ready. Press any key to return to menu...
+pause >nul
+goto Title
 :anon
 echo WeAreAnonymous%random%ERROR %RANDOM% HACKED. DELETING C:-Z: and A:/B:.
 pause >nul
@@ -76,7 +97,7 @@ open dysnomianext.bat
 :: game routines start here...
 :gamebegin
 echo Welcome to Dysnomia!
-echo Dysnomia v0.5.56 alpha.
+echo Dysnomia v0.5.64 alpha.
 pause 
 goto :MISSIONCONTROL
 :MISSIONCONTROL
@@ -487,11 +508,5 @@ goto :title
 echo Github repo link: https://github.com/DarkKnight64/Dysnomia
 pause >nul
 goto :title
-:gupdate
-echo Updating Dysnomia...
-cscript.exe dysnomiaupdate.vbs
-echo done.
-TIMEOUT 4
-exit
 :moon
 call moon.bat
