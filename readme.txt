@@ -1,3 +1,13 @@
+Dysnomia v0.5 post-alpha3 plus Readme build ~67.
+
+--Current System--
+All planets, dwarf planets, and known major moons of the Solar System
+Alpha Centuari A
+Alpha Centuari B
+Proxima Centuari and Proxima b.
+
+There will be far more stars soon. e.g brown dwarfs, Sirius, Fomalhaut, white dwarfs, maybe the 100 closest stars?
+
 Coordinate System:
 The Coordinate System for Space has two variables: x and y.
 x=up and down
