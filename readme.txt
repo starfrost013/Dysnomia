@@ -8,6 +8,15 @@ Proxima Centuari and Proxima b.
 
 There will be far more stars soon. e.g brown dwarfs, Sirius, Fomalhaut, white dwarfs, maybe the 100 closest stars?
 
+--Dysnomia Subsystems--
+Dysnomia v0.5 uses several subsystems to create the text explorable universe:
+DysnomiaID
+--> PlanetID (planets)
+--> StarID (stars)
+.ship 
+ShipID (ships)
+Universe OnDemand (a way that loads the in game universe based on position) 
+
 Coordinate System:
 The Coordinate System for Space has two variables: x and y.
 x=up and down
