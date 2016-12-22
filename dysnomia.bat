@@ -302,23 +302,27 @@ if %explorechoice%==4 goto :y2
 :y
 echo How many mKM (1 million KM = 1 mKM)?
 set /p mnx2=
-for %%A IN (%mnx2%) DO set %y%=%y%+1
+set %mnx2%=%y%+1
+set %y%=%mnx2%
 pause
 goto explore
 :y2
 echo How many mKM (1 million KM = 1 mKM)?
 set /p mnx3=
-for %%A IN (%mnx3%) DO set %y%=%y%-1
+set %mnx3%=%y%-1
+set %y%=%mnx3%
 goto explore
 :x
 echo How many mKM (1 million KM = 1 mKM)?
 set /p mnx4=
-for %%A IN (%mnx4%) DO set %x%=%x%+1
+set %mnx4%=%x%+1
+set %x%=%mnx4%
 goto explore
 :x2
 echo How many mKM (1 million KM = 1 mKM)?
 set /p mnx5=
-for %%A IN (%mnx5%) DO set %x%=%x%-1
+set %mnx5%=%x%-1
+set %x%=%mnx5%
 goto explore
 :mars
 call mars.bat
