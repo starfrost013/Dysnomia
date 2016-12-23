@@ -1,4 +1,4 @@
-:: Dysnomia v0.50.0 / v0.5 - 0.5.77
+:: Dysnomia v0.50.0 / v0.5 - 0.5.79
 :: Welcome.
 :: Forks? Just Do It.
 :: Write to dysnomialog.txt
@@ -38,12 +38,12 @@
 color 1f
 :: set color to spacey one
 :GAMEVAR
-set /a money=20000000
-set speed=0
-set burnpercent=0
-set gameversion=0.5
-set /a x=0
-set /a y=0
+set /a money= 20000000
+set speed= 0
+set burnpercent= 0
+set gameversion= 0.5
+set /a x= 0
+set /a y= 0
 @ECHO OFF
 title Dysnomia [v0.5]
 :: title and secret routines go here.
