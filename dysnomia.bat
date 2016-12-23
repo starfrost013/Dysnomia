@@ -1,4 +1,4 @@
-:: Dysnomia v0.50.0 / v0.5 - 0.5.52 16:28 21/12/2016
+:: Dysnomia v0.50.0 / v0.5 - 0.5.77
 :: Welcome.
 :: Forks? Just Do It.
 :: Write to dysnomialog.txt
@@ -103,7 +103,6 @@ goto :MISSIONCONTROL
 :MISSIONCONTROL
 cls
 echo Welcome to Mission Control! What do you want to do?
-call date.bat
 echo 1) Launch from Earth
 echo 2) Go to the shop
 echo 3) Go back to the main menu
@@ -194,94 +193,123 @@ pause >nul
 echo Takeoff!
 cls
 set speed=567
+timeout /t 1 >nul
 echo %speed%
 cls
 set speed=1028
+timeout /t 1 >nul
 echo %speed%
 cls
 set speed=1675
+timeout /t 1 >nul
 echo %speed%
 cls
 set speed=2323
+timeout /t 1 >nul
 echo %speed%
 cls
 set speed=2978
+timeout /t 1 >nul
 echo %speed%
 cls
 set speed=3534
+timeout /t 1 >nul
 echo %speed%
 cls
 set speed=4156
+timeout /t 1 >nul
 echo %speed%
 cls
 set speed=4692
+timeout /t 1 >nul
 echo %speed%
 cls
 set speed=5674
+timeout /t 1 >nul
 echo %speed%
 cls
 set speed=6228
+timeout /t 1 >nul
 echo %speed%
 cls
 set speed=6943
+timeout /t 1 >nul
 echo %speed%
 cls
 set speed=7676
+timeout /t 1 >nul
 echo %speed%
 cls
 set speed=8449
+timeout /t 1 >nul
 echo %speed%
 cls
 set speed=9136
+timeout /t 1 >nul
 echo %speed%
 cls
 set speed=9823
+timeout /t 1 >nul
 echo %speed%
 cls
 set speed=10666
+timeout /t 1 >nul
 echo %speed%
 cls
 set speed=11470
+timeout /t 1 >nul
 echo %speed%
 cls
 set speed=12184
+timeout /t 1 >nul
 echo %speed%
 echo First Stage Seperation
 timeout /t 2 >nul
 cls
 set speed=13832
 echo %speed%
-timeout /t 2 >nul
+timeout /t 1 >nul
 cls
 set speed=15116
 echo %speed%
+timeout /t 1 >nul
 cls
 set speed=16725
 echo %speed%
+timeout /t 1 >nul
 cls
 set speed=18296
+timeout /t 1 >nul
 cls
 set speed=20105
+timeout /t 1 >nul
 echo %speed%
 cls
 set speed=21974
+timeout /t 1 >nul
 echo %speed%
 cls
 set speed=23823
+timeout /t 1 >nul
+echo %speed%
 cls
 set speed=26724
+timeout /t 1 >nul
 echo %speed%
 cls
 echo Second Stage Seperation
 timeout /t 2 >nul
 cls
-set speed=30300
+set speed=30300 
+timeout /t 1 >nul
 echo %speed%
 cls
 set speed=34831
+timeout /t 1 >nul
 echo %speed%
 cls
 set speed=38792
+timeout /t 1 >nul
 echo %speed%
 cls
 echo Performing orbital burn...
