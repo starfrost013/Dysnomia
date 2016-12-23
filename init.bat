@@ -13,5 +13,12 @@ set speed=0
 set money=0
 echo Writing Log...
 call logwrite.bat
-echo Done!
+echo Creating Planetary System OnDemand core...
+cd StarID
+call 1000.bat
+cd..
+cd PlanetID
+call 1300.bat
+cd..
 call dysnomia.bat
+
