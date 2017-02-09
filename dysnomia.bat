@@ -521,10 +521,10 @@ set /a planetnine=23750
 set /a proxcen=125000
 set /a alphacena=131450
 set /a alphacenb=132000
-set /p item="Choose a planet to reach."
+set /p item="Choose a planet to go to."
 set /a item=%item%
 set /a cost=item
-if %money% lss %cost% echo you do not have enough money && goto viewprices 
+if %money% lss %cost% echo you do not have enough money && goto planetaryviewreach
 set /a money=money-item
 :show
 echo %money%
@@ -541,4 +541,4 @@ echo Github repo link: https://github.com/DarkKnight64/Dysnomia
 pause >nul
 goto :title
 :moon
-call moon.bat
+call PlanetID\1301.bat
