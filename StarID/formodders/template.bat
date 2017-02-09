@@ -19,4 +19,5 @@ set IsBinary=false :: is binary
 set BinaryOrbitalDistance=none :: binary orbital distance.
 :: StarID and PlanetID notes
 :: at the moment they are .bat, but they may become .dysnomiaid files.
-:: StarID Format v0.6
+:: StarID Format v0.7
+:: the only difference in v0.7 is that an INI file now holds the version number, so it is forward compatible.
