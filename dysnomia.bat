@@ -35,6 +35,8 @@
 :: v0.21.0 - The Great Batch File Seperation 
 :: v0.21.5 - Replaced "pause" with "pause >nul" in most instances
 :: v0.5/v0.50.0 ReWrite - 64 commits so far as of 14:46 22/12/2016, incomplet.
+if %1==jump goto %2
+
 color 1f
 :: set color to spacey one
 :GAMEVAR
@@ -330,31 +332,31 @@ if %explorechoice%==4 goto :y2
 :y
 echo How many mKM (1 million KM = 1 mKM)?
 set /p mnx2=
-set /a %mnx2%=%y%+1
-set /a %y%=%y%+1
-set /a %y%=%mnx2%
+set /a mnx2=%y%+1
+set /a y=%y%+1
+set /a y=%mnx2%
 pause
 goto explore
 :y2
 echo How many mKM (1 million KM = 1 mKM)?
 set /p mnx3=
-set /a %mnx3%=%y%-1
-set /a %y%=%y%-1
-set /a %y%=%mnx3%
+set /a mnx3=%y%-1
+set /a y=%y%-1
+set /a y=%mnx3%
 goto explore
 :x
 echo How many mKM (1 million KM = 1 mKM)?
 set /p mnx4=
-set /a %mnx4%=%x%+1
-set /a %x%=%x%+1
-set /a %x%=%mnx4%
+set /a mnx4=%x%+1
+set /a x=%x%+1
+set /a x=%mnx4%
 goto explore
 :x2
 echo How many mKM (1 million KM = 1 mKM)?
 set /p mnx5=
-set /a %mnx5%=%x%-1
-set /a %x%=%x%-1
-set /a %x%=%mnx5%
+set /a mnx5=%x%-1
+set /a x=%x%-1
+set /a x=%mnx5%
 goto explore
 :mars
 call mars.bat
