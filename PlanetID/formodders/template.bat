@@ -5,6 +5,8 @@
 :: second: planet #
 :: third: moon #
 :: fourth: If it is an asteroid, the asteroid #
+
+:: Please note that Dysnomia development has ceased as of September 9, 2017.
 set PlanetName=Test 
 :: planet name
 set PlanetSizeKM=1000 
@@ -57,7 +59,7 @@ set LifeIntel=-1
 :: 25: Interstellar (TNG)
 :: 26: Intergalatic
 :: will change with date up+down.
-:: note how the PlanetID format is beta [v0.5] and could change at any moment.
+:: note how the PlanetID format is beta [v0.6] and could change at any moment.
 set IsMoon=false 
 :: If it is a moon
 set OrbitingBody=0000 
