@@ -1,4 +1,9 @@
-Dysnomia v0.5 post-alpha3 plus Readme build ~67.
+Dysnomia v0.5.91 Readme
+
+
+//DEVELOPMENT HAS CEASED AS OF SEPTEMBER 9, 2017//
+
+//NO NEW UPDATES WILL BE RELEASED//
 
 --Current System--
 All planets, dwarf planets, and known major moons of the Solar System
