@@ -1,3 +1,6 @@
+
+:: Please note that Dysnomia development has ceased as of September 9, 2017.
+
 :: StarID for stars, lol.
 set StarName=teststar :: name
 set SpectralType=M9 :: M9 LOL. anyway, spectral type of the star. Can be anywhere from Y9 (small brown dwarf) to O0 (raging hyper star), or WR (insane raging hyper star about to die), or Wx (dead white dwarf)
