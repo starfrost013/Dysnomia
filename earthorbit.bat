@@ -1,3 +1,8 @@
+@echo off
+REM File 0.5.91 / 0.22.0
+
+REM Development has ceased as of September 9, 2017.
+
 :orbitmenu
 cls
 set altitude=2000
@@ -21,22 +26,23 @@ if %orbitmenu%==6 goto :stellartransfer
 if %orbitmenu%==7 goto :moneycheck
 if %orbitmenu%==8 goto :landing
 if %orbitmenu%==9 goto :crewreport
+
+echo Incorrect option!
+goto orbitmenu
+
 :crewreport
 echo It makes you feel really small...
 pause
 goto :orbitmenu
 :moontransfer
-echo Transferring to Moon...8%.
-pause
-echo Transferring to Moon...19%.
-pause
-echo Transferring to Moon...32%.
-pause
-echo Transferring to Moon...49%.
-pause
-echo Transferring to Moon...60%.
-pause
-echo Transferring to Moon...81%.
+set transfer=0
+echo Transferring to Moon...%transfer%.
+timeout /t 2 >nul
+set transfer=32
+echo Transferring to Moon...%transfer%.
+timeout /t 2 >nul
+set transfer=81
+echo Transferring to Moon...%transfer%
 pause
 echo Transferring to Moon...100%.
 pause
@@ -50,6 +56,9 @@ set /p orbitmenulow=
 if %orbitmenulow%==1 set %altitude%==210
 if %orbitmenulow%==2 set %altitude%==500
 if %orbitmenulow%==3 set %altitude%==1000
+goto orbitmenu
+echo Incorrect option!
+
 goto :orbitmenu
 :orbithigh
 echo Which orbit do you want to transfer to? You will return to the Earth Orbital Menu afterwards. Current orbit %altitude%km.
