@@ -34,20 +34,57 @@
 :: v0.20.1 - Typo corrections...
 :: v0.21.0 - The Great Batch File Seperation 
 :: v0.21.5 - Replaced "pause" with "pause >nul" in most instances
-:: v0.5/v0.50.0 ReWrite - 64 commits so far as of 14:46 22/12/2016, incomplet.
-if %1==jump goto %2
+:: v0.5/v0.50.0 ReWrite - 64 commits so far as of 14:46 22/12/2016, incomplete.
+:: v0.5 NoBugs [0.5.91] - Final version of Dysnomia - fix a lot of bugs. 
 
+:: DEVELOPMENT HAS CEASED AS OF SEPTEMBER 9, 2017
+
+REM if %1==jump goto goto2
+REM if %1==x goto xset
+REM if %1==y goto yset
+REM if %1==earth goto earthl
+goto GAMEVAR
+:goto2
+set /a money=20000000
+set speed=0
+set burnpercent=0
+set gameversion=0.5
+set /a x=0
+set /a y=0
+@echo off
+goto %2
+:xset
+set /a money=20000000
+set speed=0
+set burnpercent=0
+set gameversion=0.5
+set x=%2
+:yset
+set /a money=20000000
+set speed=0
+set burnpercent=0
+set gameversion=0.5
+set y=%2
+:earthl
+set /a money=20000000
+set speed=0
+set burnpercent=0
+set gameversion=0.5
+set /a x=0
+set /a y=0
+@echo off
+goto earthlaunch
 color 1f
 :: set color to spacey one
 :GAMEVAR
-set /a money= 20000000
-set speed= 0
-set burnpercent= 0
-set gameversion= 0.5
-set /a x= 0
-set /a y= 0
+set /a money=20000000
+set speed=0
+set burnpercent=0
+set gameversion=0.5
+set /a x=0
+set /a y=0
 @ECHO OFF
-title Dysnomia [v0.5]
+title Dysnomia [v0.5.91 Final Update]
 :: title and secret routines go here.
 goto :Title
 :Secret
@@ -61,35 +98,49 @@ echo //Dysnomia//
 echo 1: Start
 echo 2: Instructions
 echo 3: GitHub
-echo 4: Game Update
-echo 5: Options
-echo 6: exit
+echo 4: Options
+echo 5: exit
 set /p Gamedate=
 if %Gamedate%==1 goto :gamebegin
 if %Gamedate%==2 goto :instr
 if %Gamedate%==3 goto :GitHub
-if %Gamedate%==4 goto :gupdate
+REM if %Gamedate%==4 goto :gupdate
 if %Gamedate%==5 goto :options
-if %Gamedate%==6 goto :exit
+if %Gamedate%==6 exit
 if %Gamedate%==anon goto :anon
 if %Gamedate%==461523 goto :Secret
+
+echo Incorrect option!
+goto title
 :options
 cls
 echo Dysnomia Options:
 echo.
 echo.
-echo Window Color: 1) Dark blue on white 2) Cyan on white 3) Purple on white 4) Black on white 5) White on dark blue
+echo Window Color: 1) Dark blue on white (default) 2) Cyan on white 3) Purple on white 4) Black on white 5) White on dark blue
 set /p option=
-if %option%==1 color 1f
-if %option%==2 color 37
-if %option%==3 color 57
-if %option%==4 color 07
-if %option%==5 color 79
-goto menu
-:gupdate
-echo Feature not ready. Press any key to return to menu...
-pause >nul
+if %option%==1 goto 1f
+if %option%==2 goto 37
+if %option%==3 goto 57
+if %option%==4 goto 07
+if %option%==5 goto 79
+
+:1f
+color 1f
 goto Title
+:37
+color 37
+goto Title
+:57
+color 37
+goto Title
+:07
+color 07
+goto Title
+:79
+color 79
+goto Title
+goto menu
 :anon
 echo WeAreAnonymous%random%ERROR %RANDOM% HACKED. DELETING C:-Z: and A:/B:.
 pause >nul
@@ -99,7 +150,8 @@ open dysnomianext.bat
 :: game routines start here...
 :gamebegin
 echo Welcome to Dysnomia!
-echo Dysnomia v0.5.64 alpha.
+echo Dysnomia v0.5.91 alpha.
+echo Development has ceased as of September 9, 2017.
 pause 
 goto :MISSIONCONTROL
 :MISSIONCONTROL
@@ -108,12 +160,13 @@ echo Welcome to Mission Control! What do you want to do?
 echo 1) Launch from Earth
 echo 2) Go to the shop
 echo 3) Go back to the main menu
-echo 4) View destinations
 set /p missionchoice=
 if %missionchoice%==1 goto :earthlaunch
 if %missionchoice%==2 goto :shop
 if %missionchoice%==3 goto :Title
-if %missionchoice%==4 goto :help
+
+echo Incorrect option!
+goto MISSIONCONTROL
 :earthlaunch
 goto earth
 :destinchoice
@@ -168,155 +221,121 @@ if %destinations%==proxcen goto :proxcen
 if %destinations%==alphacena goto :alphacena
 if %destinations%==alphacenb goto :alphacenb
 if %destinations%==help goto :help
+
+echo Incorrect option.
+goto destinchoice
 :: Earth launch, orbital menu, landing...etc start here.
 :earth 
 echo Taking Off...
-pause >nul
-echo 10
-pause >nul
-echo 9
-pause >nul
-echo 8
-pause >nul
-echo 7
-pause >nul
-echo 6
-pause >nul
-echo 5
-pause >nul
-echo 4
-pause >nul
-echo 3
-pause >nul
-echo 2
-pause >nul
-echo 1
-pause >nul
+timeout /t 10
 echo Takeoff!
 cls
-set speed=567
-timeout /t 1 >nul
+set speed="Velocity: 567"
 echo %speed%
+timeout /t 5 >nul
 cls
-set speed=1028
-timeout /t 1 >nul
+set speed="Velocity: 5674"
 echo %speed%
+timeout /t 5 >nul
 cls
-set speed=1675
-timeout /t 1 >nul
+set speed="Velocity: 10666"
 echo %speed%
+timeout /t 2 >nul
 cls
-set speed=2323
-timeout /t 1 >nul
-echo %speed%
-cls
-set speed=2978
-timeout /t 1 >nul
-echo %speed%
-cls
-set speed=3534
-timeout /t 1 >nul
-echo %speed%
-cls
-set speed=4156
-timeout /t 1 >nul
-echo %speed%
-cls
-set speed=4692
-timeout /t 1 >nul
-echo %speed%
-cls
-set speed=5674
-timeout /t 1 >nul
-echo %speed%
-cls
-set speed=6228
-timeout /t 1 >nul
-echo %speed%
-cls
-set speed=6943
-timeout /t 1 >nul
-echo %speed%
-cls
-set speed=7676
-timeout /t 1 >nul
-echo %speed%
-cls
-set speed=8449
-timeout /t 1 >nul
-echo %speed%
-cls
-set speed=9136
-timeout /t 1 >nul
-echo %speed%
-cls
-set speed=9823
-timeout /t 1 >nul
-echo %speed%
-cls
-set speed=10666
-timeout /t 1 >nul
-echo %speed%
-cls
-set speed=11470
-timeout /t 1 >nul
-echo %speed%
-cls
-set speed=12184
-timeout /t 1 >nul
-echo %speed%
 echo First Stage Seperation
 timeout /t 2 >nul
 cls
-set speed=13832
+set speed="Velocity: 1511"
 echo %speed%
-timeout /t 1 >nul
+timeout /t 5 >nul
 cls
-set speed=15116
-echo %speed%
-timeout /t 1 >nul
-cls
-set speed=16725
-echo %speed%
-timeout /t 1 >nul
-cls
-set speed=18296
-timeout /t 1 >nul
-cls
-set speed=20105
-timeout /t 1 >nul
-echo %speed%
-cls
-set speed=21974
-timeout /t 1 >nul
-echo %speed%
-cls
-set speed=23823
-timeout /t 1 >nul
-echo %speed%
-cls
-set speed=26724
-timeout /t 1 >nul
+set speed="Velocity: 23823"
+timeout /t 5 >nul
 echo %speed%
 cls
 echo Second Stage Seperation
-timeout /t 2 >nul
+timeout /t 5 >nul
 cls
-set speed=30300 
-timeout /t 1 >nul
-echo %speed%
-cls
-set speed=34831
-timeout /t 1 >nul
-echo %speed%
-cls
-set speed=38792
+set speed="Velocity: 38792"
 timeout /t 1 >nul
 echo %speed%
 cls
 echo Performing orbital burn...
-timeout /t 7 >nul
+timeout /t 3 >nul
+echo Performing orbital burn 50%...
+timeout /t 4 >nul
+echo Performing orbital burn 100%...
+timeout /t 1 >nul
 goto :explore
+:eventloop
+if %x%==18 goto event1
+if %x%==19 goto event1
+if %x%==17 goto event1
+if %y%==10 goto event2
+if %y%==9 goto event2
+if %y%==11 goto event2
+if %x%==20 goto event3
+if %x%==19 goto event3
+if %x%==21 goto event4
+if %x%==19 goto event4
+if %y%==39 goto event4
+if %y%==40 goto event4
+if %y%==41 goto event4
+if %x%==36 goto event5
+if %x%==37 goto event6
+if %x%==35 goto event6
+if %x%==64 goto event6
+if %x%==63 goto event6
+if %x%==65 goto event6
+if %y%==1400 goto event7
+if %y%==1399 goto event7
+if %y%==1401 goto event7
+:event1
+echo You find a strange planet, and go to look into it.
+pause
+set x=24
+set y=10
+goto explore
+:event2
+echo You see this strange planet, and it doesn't appear to look solid and has massive holes. You fly down to investigate.
+pause
+set x=20
+set y=28
+goto explore
+:event3
+echo Getting closer you realize that it is partially solid and has what appears to be continents floating about in nothingness.
+pause
+set x=30
+set y=40
+goto explore
+:event4
+echo You go to your captain to think about landing at this strange planet.
+pause
+set x=36
+set y=56
+goto explore
+:event5
+echo Your captain agrees with you, and you go to the controls, slowly piloting it down towards the planet.
+pause
+set x=64
+set y=-5
+goto explore
+:event6
+echo As you are landing, the planet pulls  you in. 
+pause
+set x=9312
+set y=1400
+goto explore
+:event7
+echo You hit the planet.
+timeout /t 2 >nul
+echo And...and...and...
+timeout /t 2 >nul
+iexplore.exe http://lotaris.dx.am/
+iexplore.exe http://m7-technologies.co.nf/
+echo Dysnomia development has ended.
+timeout /t 10 >nul
+exit
 :explore
 cls
 echo Current Coords: %x% %y% (1 x = 1 million km up/down, 1 y = 1 million km left/right.)
@@ -325,225 +344,60 @@ echo 2) Move down
 echo 3) Move left
 echo 4) Move right
 set /p explorechoice=
-if %explorechoice%==1 goto :x
-if %explorechoice%==2 goto :x2
-if %explorechoice%==3 goto :y
-if %explorechoice%==4 goto :y2
+if %explorechoice%==1 goto :y
+if %explorechoice%==2 goto :y2
+if %explorechoice%==3 goto :x
+if %explorechoice%==4 goto :x2
 :y
 echo How many mKM (1 million KM = 1 mKM)?
 set /p mnx2=
-set /a mnx2=%y%+1
-set /a y=%y%+1
+set /a mnx2=%y%+%mnx2%
+set /a y=%y%+%mnx2%
 set /a y=%mnx2%
 pause
-goto explore
+goto eventloop
 :y2
 echo How many mKM (1 million KM = 1 mKM)?
 set /p mnx3=
-set /a mnx3=%y%-1
-set /a y=%y%-1
+set /a mnx3=%y%-%mnx3%
+set /a y=%y%-%mnx3%
 set /a y=%mnx3%
-goto explore
+goto eventloop
 :x
 echo How many mKM (1 million KM = 1 mKM)?
 set /p mnx4=
-set /a mnx4=%x%+1
-set /a x=%x%+1
+set /a mnx4=%x%+%mnx4%
+set /a x=%x%+%mnx4%
 set /a x=%mnx4%
-goto explore
+goto eventloop
 :x2
 echo How many mKM (1 million KM = 1 mKM)?
 set /p mnx5=
-set /a mnx5=%x%-1
-set /a x=%x%-1
+set /a mnx5=%x%-%mnx5%
+set /a x=%x%-%mnx5%
 set /a x=%mnx5%
-goto explore
+goto eventloop
 :mars
 call mars.bat
 :moneycheck
 echo %money%
 pause 
 goto :orbitmenu
-
-:unused1
-echo Destinations:
-echo Mercury
-echo Venus
-echo Earth
-echo Moon
-echo Mars
-echo Phobos
-echo Deimos
-echo Vesta
-echo Ceres
-echo Jupiter
-echo Io
-echo Europa
-echo Ganymede
-echo Callisto
-echo Saturn
-echo Mimas
-echo Enceladus
-echo Tethys
-echo Dione
-echo Rhea
-echo Titan
-echo Iapetus
-echo Uranus
-echo Miranda
-echo Ariel
-echo Umbriel
-echo Titania
-echo Oberon
-echo Neptune
-echo Triton 
-echo Nereid
-echo Pluto
-echo Charon
-echo Nix
-echo Styx
-echo Hydra
-echo Kerberos
-echo Eris
-echo Dysnomia
-echo Haumea
-echo Hiiaka
-echo Namaka
-echo Sedna
-echo Planet Nine
-echo Proxima Centuari (type proxcen)
-echo Alpha Centuari A (type alphacena)
-echo Alpha Centuari B (type alphacenb)
-echo Press any key to return to Mission Control
-pause >nul >nul
-goto :MISSIONCONTROL
-:: shop goes here
-:shop
-cls
-echo What do you want to do?
-echo 1 - Buy planetary reaching technology
-echo 2 - View prices 
-echo 3 - Go back to mission control.
-set /p crystal=
-if %crystal%==1 goto :planetaryviewreach
-if %crystal%==2 goto :viewprices
-if %crystal%==3 goto :MISSIONCONTROL
-:viewprices
-echo Your money is %money% (also, NO capital letters while typing)
-echo Moon=5
-echo Mars=24
-echo Venus=37
-echo Deimos=49
-echo Phobos=61
-echo Mercury=80
-echo Sun=110 (hot)
-echo Vesta=125
-echo Ceres=145
-echo Jupiter=245
-echo Io=246
-echo Europa=249
-echo Ganymede=252
-echo Callisto=253
-echo Saturn=345
-echo Mimas=348
-echo Enceladus=350
-echo Tethys=353
-echo Dione=355
-echo Rhea=356
-echo Titan=360
-echo Iapetus=364
-echo Uranus=626
-echo Miranda=628
-echo Ariel=630
-echo Umbriel=632
-echo Titania=634
-echo Oberon=639
-echo Neptune=1600
-echo Triton=1616
-echo Nereid=1632
-echo Pluto=3000
-echo Charon=3007
-echo Nix=3030
-echo Hydra=3032
-echo Kerberos=3036
-echo Styx=3039
-echo Eris=4150
-echo Dysnomia=4154
-echo Haumea=4675
-echo Hiiaka=4681
-echo Namaka=4695
-echo Sedna=8000
-echo Planet Nine (type planetnine)=23750
-echo Proxima Centuari (type proxcen)=125000
-echo Alpha Centuari A (type alphacena)=131450
-echo Alpha Centuari B (type alphacenb)=132000
-goto :planetaryviewreach
-:planetaryviewreach
-cls
-set /a moon=5
-set /a mars=24
-set /a venus=37
-set /a deimos=49
-set /a phobos=51
-set /a mercury=80
-set /a sun=110
-set /a vesta=125
-set /a ceres=145
-set /a jupiter=245
-set /a io=246
-set /a europa=249
-set /a ganymede=252
-set /a callisto=253
-set /a saturn=345
-set /a mimas=348
-set /a enceladus=350
-set /a tethys=353
-set /a dione=355
-set /a rhea=356
-set /a titan=360
-set /a iapetus=364
-set /a uranus=626
-set /a miranda=628
-set /a ariel=630
-set /a umbriel=632
-set /a titania=634
-set /a oberon=639
-set /a neptune=1600
-set /a triton=1616
-set /a nereid=1632
-set /a pluto=3000
-set /a charon=3007
-set /a nix=3030
-set /a hydra=3032
-set /a kerberos=3036
-set /a styx=3039
-set /a eris=4150
-set /a dysnomia=4154
-set /a haumea=4675
-set /a hiiaka=4681
-set /a namaka=4695
-set /a sedna=8000
-set /a planetnine=23750
-set /a proxcen=125000
-set /a alphacena=131450
-set /a alphacenb=132000
-set /p item="Choose a planet to go to."
-set /a item=%item%
-set /a cost=item
-if %money% lss %cost% echo you do not have enough money && goto planetaryviewreach
-set /a money=money-item
-:show
-echo %money%
-pause >nul
-goto start
+:: unused code removed in 0.5.91 Final Update
 :: ...and end here.
 :: other main menu option routines go here
 :instr
-echo Simple text adventure game with XP and stuff. Just upgrade.
+echo Welcome to Dysnomia. Please note that as of September 9th, 2017, development has ceased.
+echo Press 1 at Mission Control to launch from Earth. When you reach the Explore screen, press 1, 2, 3, or 4 to move up or down.
+echo Some spots have events. Go to X pos 18 to begin.
+echo Moving up will increase Y, down will decrease. Left will increase X, right will decrease.
 pause >nul
 goto :title
 :GitHub
+echo Version 0.5.91 (Dysnomia 0.5: Rewrite Final Update)
 echo Github repo link: https://github.com/DarkKnight64/Dysnomia
+color 0c
+echo Development has completely ceased as of September 9, 2017
 pause >nul
 goto :title
 :moon
